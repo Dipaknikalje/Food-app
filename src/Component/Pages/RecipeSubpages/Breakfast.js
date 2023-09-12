@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import "./pages.css"
+import "../pages.css"
 
-const Healthy = () => {
+const Breakfast = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    const API = `https://www.edamam.com/search?q=healthy&cocktail&app_id=591bd3cd&app_key=ee49bf3041e13fa627976b22e7cd9ebb`;
+    const API = `https://www.edamam.com/search?q=breakfast&cocktail&app_id=591bd3cd&app_key=ee49bf3041e13fa627976b22e7cd9ebb`;
     axios
       .get(API)
       .then((res) => setData(res.data.hits))
@@ -32,4 +32,4 @@ const Healthy = () => {
   );
 }
 
-export default Healthy
+export default Breakfast

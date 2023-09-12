@@ -9,6 +9,8 @@ import Holidays from '../../Pages/Holidays'
 import Cuisine from '../../Pages/Cuisine'
 import Seasonal from '../../Pages/Seasonal'
 import LoginPage from '../../Auth/LoginPage'
+import Breakfast from '../../Pages/RecipeSubpages/Breakfast'
+import Searchbar from '../../Pages/searchbar/Searchbar'
 
 const Routing = () => {
   return (
@@ -16,14 +18,15 @@ const Routing = () => {
     <Routes>
         <Route path="/" element={<Rootlayout/>}>
         <Route path="/" element={<Home/>}/>
+        <Route path="/breakfast" element={<Breakfast/>}/>
         <Route path='/popular' element={<Popular/>}/>
-        <Route path='/meat&seafood' element={<Meat/>}/>
+        <Route path='/meat' element={<Meat/>}/>
         <Route path='/healthydiet' element={<Healthy/>}/>
         <Route path='/holidays' element={<Holidays/>}/>
-        <Route path='/cuisine' element={<Cuisine/>}/>
-        <Route path='/seasonal' element={<Seasonal/>}/>
+        <Route path='/cousine' element={<Cuisine/>}/>
         <Route path='/seasonal' element={<Seasonal/>}/>
         <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/search' element={<Searchbar/>}/>
 
         </Route>
     </Routes>
