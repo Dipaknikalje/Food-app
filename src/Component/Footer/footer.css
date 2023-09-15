@@ -6,6 +6,8 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    position:relative;
+    bottom:0;
 }
 .Footer-bar-child1 {
     display: flex;
@@ -22,13 +24,13 @@
 }
 .icons div{
     margin:1rem;
-    font-size:1.5rem;
+    font-size:1rem;
 }
 .footer-nav{
     display:flex;
     flex-direction: row;
     justify-content: flex-start;
-    font-size:1.5rem;
+    font-size:1rem;
 }
 .footer-nav div{
     margin:1rem;
@@ -37,9 +39,10 @@
     display: flex;
     flex-direction:column;
     justify-content: flex-end;
-    font-size:1.5rem;
+    font: size 1rem;
     position:relative;
-    top:-40px;
+    top:-60px;
+    right:2rem;
 }
 .discovery{
     position:relative;
@@ -47,7 +50,7 @@
 
 }
 .copyright{
-    font-size:1.2rem;
+    font-size:1rem;
     font-weight: -100;
 }
 .Footer-nav2 ul{

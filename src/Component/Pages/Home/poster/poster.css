@@ -1,0 +1,67 @@
+.poster-file{
+    display: flex;
+}
+
+
+
+.poster-img{
+    margin: 1.3rem
+}
+.poster-img img{
+    height: 40rem;
+    width: 90vw;
+    background: linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0));
+    z-index: 2;
+}
+.poster-img::before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 70%;
+    height: 40rem;
+    rotate: 180deg;
+    background: linear-gradient(to right, transparent, black);
+    z-index: 0; 
+}
+
+.poster-label{
+    z-index: 0;
+    position: absolute;
+    top: 20rem;
+    left: 10%;
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.poster-label h1{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size:3rem ;
+    letter-spacing: 2px;
+}
+
+.poster-label a{
+    margin-top: 1rem;
+    text-decoration: none;
+    background-color: #f5ce35;
+    color: #4c392f;
+    font-family: 'Maven Pro', sans-serif;
+    border-radius:5px ;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    font-size:1rem;
+}
+.see-btn{
+    margin:5px;
+    width:250px;
+    height:100px;
+    overflow: hidden;
+}
+.poster1{
+    margin: auto;
+}

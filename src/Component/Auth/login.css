@@ -1,41 +1,199 @@
-*{
-    margin:0;
-    padding:0;
-    outline:none;
-    box-sizing:border-box;
-    font-family: 'Poppins',sans-serif;
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(5px); 
+    
+    z-index: 21;
+
 }
-body{
-    height: 100vh;
-    width:100%;
+
+.mainbox-data{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 30;  
+    width: 27rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    overflow: scroll;
 }
-.container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+
+.close-btn-mainbox{
+    display: flex;
+    justify-content: flex-end;
 }
-.container{
-    width:400px;
-    padding:30px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+.close-btn-mainbox:checked{
+    display: none;
 }
-.container .text{
-    font-size:35px;
-    font-weight: 600;
+
+.close-btn-mainbox img{
+    width: 5%;
+    /* float: right; */
+    cursor: pointer;
+}
+
+.user-content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 66%;
+}
+.user-content h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.user label{
+    font-family: 'Maven Pro', sans-serif;
+
+}
+.user input{
+    height: 3rem;
+    background-color: rgb(236, 231, 231);
+    border: none;
+}
+
+.user button{
+    background-color: rgba(236, 236, 0, 0.904);
+    font-family: 'Maven Pro', sans-serif;
+    height: 3rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.forgot-pass{
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: blue;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1rem;
+}
+
+.err-occured{
+    /* border: 1px solid black; */
+    height: 1rem;
+    color: red;
+}
+
+.auth-socials-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 1rem;
+    margin: auto;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 25%;
+}
+
+.continue-txt{
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+
+
+.social-icons-login{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.social-icons-login i{
+    font-size:2rem;
+}
+
+.bottom-section{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Register */
+
+.register-desc-txt{
+    font-family: 'Maven Pro', sans-serif;
     text-align: center;
 }
-.container form{
-    margin-top: -20px;
+
+.terms{
+    display: flex;
+    flex-direction:row;
+    font-family: 'Maven Pro', sans-serif;
+
 }
-.container form .data{
-    height:60px;
-    width:100%;
-    margin:40px 0;
+.terms p{
+    font-size:small;
+    height:max-content;
+    margin-bottom:10px;
 }
-form .data input{
-    padding-top: 5px;;
-    height:70%;
-    width:100%;
+
+.register-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 30;  
+    width: 27rem;
+    height: 38rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    overflow: scroll;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 80%; */
+}
+
+.register-form-content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* height: 66%; */
+}
+.register-form-content h2{
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
 
 }

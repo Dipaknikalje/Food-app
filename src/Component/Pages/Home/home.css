@@ -1,22 +1,32 @@
 
-.image56{
-    background-image: url('https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_1280,ar_16:9/v1/img/recipes/24/25/3/l3Fx6AnTcGOjhwYNhggo_0S9A9332.jpg');
-    height:700px;
-    background-size: cover;
-    margin-left:5rem;
-    margin-right:5rem;
-
-
-}
+/* .home-page{
+    font-size:62.5%;
+} */
 .addvertise{
     height:80px;
-    background-color: aquamarine;
-    padding-top:2rem;
-    margin-top: 5rem;
-    margin-left:5rem;
-    margin-right:5rem;
+    background-color:#d9d9d9;
+    height:10rem;
+    margin:auto;
+    width:90%;
 
 }
+.ad-explore{
+    background-color: #d9d9d9;
+    height: 10rem;  
+    width: 90%;
+    margin: auto;
+}
+.ad-idea{
+   background-color: #d9d9d9;
+   width: 90%;
+   margin: auto;
+   height: 10rem;  
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+
+
+}
+
 .heading-btn{
     display:flex;
     justify-content: space-between;
@@ -50,6 +60,7 @@
     height:400px;
     width:300px; 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity:1;
 
 }
 .user-conent-review{

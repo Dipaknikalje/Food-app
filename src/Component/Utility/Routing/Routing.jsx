@@ -11,6 +11,11 @@ import Seasonal from '../../Pages/Seasonal'
 import LoginPage from '../../Auth/LoginPage'
 import Breakfast from '../../Pages/RecipeSubpages/Breakfast'
 import Searchbar from '../../Pages/searchbar/Searchbar'
+import RecipePage from '../../Pages/recipe/RecipePage'
+import Search from '../../Pages/searchbar/Search'
+import RegisterPage from '../../Auth/RegisterPage'
+import Details from '../../Pages/recipe/Details'
+import SavedRecipePage from '../../Pages/BookMark/SavedRecipePage'
 
 const Routing = () => {
   return (
@@ -26,7 +31,13 @@ const Routing = () => {
         <Route path='/cousine' element={<Cuisine/>}/>
         <Route path='/seasonal' element={<Seasonal/>}/>
         <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/search' element={<Searchbar/>}/>
+        <Route path='/register' element={<RegisterPage/>}/>
+
+        <Route path='/searchbar' element={<Searchbar/>}/>
+        <Route path='/search' element={<Search/>}/>
+        <Route path='/recipe' element={<RecipePage/>}/>
+        <Route path='/details' element={<Details/>}/>
+        <Route path='/saverecipe' element={<SavedRecipePage/>}/>
 
         </Route>
     </Routes>

@@ -1,0 +1,33 @@
+.peach-page{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+
+ }
+ 
+ .peach-pic-card{
+    width: 65%;
+ }
+ .peach-pic-card img{
+    width: 100%;
+ }
+ .peach-description-card{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+    font-family: 'Maven Pro', sans-serif;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+ }
+ 
+ .peach-description-card h3{
+    font-size: 1.7rem;
+    font-weight: 500;
+    /* letter-spacing: 1px; */
+ }
+ .peach-description{
+    font-size: 1.1rem;
+ }

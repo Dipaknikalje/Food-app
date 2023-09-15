@@ -1,111 +1,113 @@
-import React, { useState} from "react";
+import React from "react";
 import "./login.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import closeIcon from "../../Assets/cancel_8618474.png";
+import { useState } from "react";
 import axios from "axios";
-const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [responseData,setResponseData]=useState(null)
-  const navigate = useNavigate();
-  // const {dispatch}=useLogin()
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setIsLoggedIn } from "../Utility/Redux/CartSlice";
 
-  const emailHandler = (event) => {
-    event.preventDefault();
-    setEmail(event.target.value);
+const Login = () => {
+  const nav = useNavigate();
+
+  const dispatch = useDispatch();
+  // const state = useSelector((state) => console.log(state.value));
+  const [data,setData]=useState([])
+
+  const [errMsg, setErrMsg] = useState(null);
+
+  const [user, setUser] = useState({
+    email: null,
+    password: null,
+  });
+
+  const onChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+    console.log(user);
   };
-  const passwordHandler = (event) => {
-    event.preventDefault();
-    setPassword(event.target.value);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const res = await axios.post("http://localhost:7070/user/login", user);
+    console.log(res.data.msg);
+    const status = res.data.msg;
+    setData(res.data);
+
+    if (status === "User logged in successfully") {
+      dispatch(setIsLoggedIn(true));
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("data",data);
+      nav("/")
+    }
+    setErrMsg(res.data.msg);
   };
-  const registerUser = async (userData)=>{
-    const api = "https://techdips-com.onrender.com/userdata/login"
-    const response = await axios.post(api,userData)
-    setResponseData(response.data)
-    
-    console.log(response.data)
-    if(response.data.token){
-      // dispatch({type:"USER" , payload:true})
-      // window.alert("login successfully")
-      console.log(responseData)
-      localStorage.setItem("token",response.data.token)
-      localStorage.setItem("loggedIn", true)
-      localStorage.setItem("name",response.data.userData.name)
-      localStorage.setItem("userId",response.data.userData._id)
-
-
-
-        navigate("/")
-      
-     
-    }
-    else{
-      window.alert("invalid credential")
-      navigate('/register')
-    }
-}
-
-// useEffect(()=>{
-//     if(responseData){
-//         console.log(responseData)
-//         console.log(responseData.token)
-//         localStorage.setItem("token",responseData.token)
-//         // localStorage.setItem("refreshToken",responseData.refreshToken)
-        
-//     }
-// },[responseData])
-  const submitHandler = (e) => {
-    e.preventDefault()
-    const userData = {
-        email:email,
-        password:password,
-
-    }
-    setPassword("")
-    setEmail("")
-    registerUser(userData)
-}
+  function handlePopup(){
+    nav(-1);
+  }
 
   return (
     <>
-    <div className="center">
-      <div className="container">
-        {/* <span className="borderline"></span> */}
-        <div className="text">Log in</div>
-        <form>
-          <div className="data">
-            <label>Email</label>
-            <input
-              type="text"
-              name="user-name"
-              required="required"
-              onChange={emailHandler}
-              value={email}
-            />
-          </div>
-          <label>Password</label>
+      <div className="overlay"></div>
+      <div className="mainbox-data">
+        <div className="close-btn-mainbox">
+          <img onClick={handlePopup} alt="close button" src={closeIcon} />
+        </div>
 
-          <div className="data">
+        <div className="user-content login-content">
+          <h2>LOG IN</h2>
+
+          <form className="user login">
+            <label>EMAIL</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              onChange={onChange}
+            />
+            <div className="err-occured">{""}</div>
+            <label>PASSWORD</label>
             <input
               type="password"
               name="password"
-              required="required"
-              onChange={passwordHandler}
-              value={password}
+              placeholder="Password"
+              onChange={onChange}
             />
-          </div>
-          <div className="links">
-            <NavLink to="/forgot">Forgot Password</NavLink>
-            <NavLink to="/register">Register</NavLink>
-          </div>
-          <button type="submit" value="login" onClick={submitHandler}>
-            Log in
-          </button>
-        </form>
-      </div>
-    </div>
+            <div className="err-occured">{errMsg} </div>
 
+            <button onClick={handleLogin}>LOG IN</button>
+          </form>
+        </div>
+
+        <NavLink className="forgot-pass">FORGOT PASSWORD?</NavLink>
+
+        <div className="auth-socials-content">
+          <p className="continue-txt"> OR CONTINUE WITH</p>
+          <div className="social-icons-login">
+          <NavLink>
+              <i class="fa-brands fa-apple"></i>
+            </NavLink>
+            <NavLink>
+              <i class="fa-brands fa-google"></i>
+            </NavLink>
+            <NavLink>
+              <i class="fa-brands fa-facebook"></i>{" "}
+            </NavLink>
+            
+            <NavLink>
+              <i class="fa-brands fa-amazon"></i>
+            </NavLink>
+           
+          </div>
+
+          <div className="bottom-section">
+            <p>Don't have acount yet?</p>
+            <NavLink to="/register" >Sign Up</NavLink>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
-export default LoginPage;
+export default Login;

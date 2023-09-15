@@ -23,78 +23,78 @@ const NavBar = () => {
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink className="drpdwn-link" to="/breakfast">
+                  <NavLink to="/recipe?q=breakfast" className="dropdown-list">
                     Breakfast & Brunch Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/lunch">
+                  <NavLink className="drpdwn-link" to="/recipe?q=lunch">
                     Lunch Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/appetizers">
+                  <NavLink className="drpdwn-link" to="/recipe?q=snack">
                     Appetizers & Snack Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/dinner">
+                  <NavLink className="drpdwn-link" to="/recipe?q=dinner">
                     Dinner Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/dessert">
+                  <NavLink className="drpdwn-link" to="/recipe?q=dessert">
                     Dessert Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/drink">
+                  <NavLink className="drpdwn-link" to="/recipe?q=drink">
                     Drink & Cocktail Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/sidedish">
+                  <NavLink className="drpdwn-link" to="/recipe?q=sidedish">
                     Side Dish Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/grilling">
+                  <NavLink className="drpdwn-link" to="/recipe?q=grilling">
                     Grilling & BBQ Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/microvave">
+                  <NavLink className="drpdwn-link" to="/recipe?q=microvave">
                     Microvave Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/quick">
+                  <NavLink className="drpdwn-link" to="/recipe?q=quick">
                     Quick & Easy Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/slowcooker">
+                  <NavLink className="drpdwn-link" to="/recipe?q=slowcooker">
                     Slow Cooker Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/airfryer">
+                  <NavLink className="drpdwn-link" to="/recipe?q=airfryer">
                     Air Fryer Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/instant">
+                  <NavLink className="drpdwn-link" to="/recipe?q=instant">
                     Instant Pot Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/baking">
+                  <NavLink className="drpdwn-link" to="/recipe?q=baking">
                     Baking Recipes
                   </NavLink>
                 </li>
                 <br />
                 <li>
-                  <NavLink className="drpdwn-link" to="/recipes">
+                  <NavLink className="drpdwn-link" to="/recipe?q=recipes">
                     See More
                   </NavLink>
                 </li>
@@ -103,64 +103,64 @@ const NavBar = () => {
           </li>
 
           <li className="active">
-            <NavLink to="/popular" className="nav_link">
+            <NavLink to="/recipe?q=popular" className="nav_link">
               Popular
             </NavLink>
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink className="drpdwn-link" to="/trending">
+                  <NavLink className="drpdwn-link" to="/recipe?q=trending">
                     Trending Now
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/casserole">
+                  <NavLink className="drpdwn-link" to="/recipe?q=casserole">
                     Casserole Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/chilli">
+                  <NavLink className="drpdwn-link" to="/recipe?q=chilli">
                     Chilli Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/soup">
+                  <NavLink className="drpdwn-link" to="/recipe?q=soup">
                     Soup Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/pasta">
+                  <NavLink className="drpdwn-link" to="/recipe?q=pasta">
                     Pasta Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/bread">
+                  <NavLink className="drpdwn-link" to="/recipe?q=bread">
                     Bread Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/cookie">
+                  <NavLink className="drpdwn-link" to="/recipe?q=cookie">
                     Cookie Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/salad">
+                  <NavLink className="drpdwn-link" to="/recipe?q=salad">
                     Salad Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/tofu">
+                  <NavLink className="drpdwn-link" to="/recipe?q=tofu">
                     Tofu Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/copycat">
+                  <NavLink className="drpdwn-link" to="/recipe?q=copycat">
                     Copycat Recipes
                   </NavLink>
                 </li>
                 <br />
                 <li>
-                  <NavLink className="drpdwn-link" to="/popular">
+                  <NavLink className="drpdwn-link" to="/recipe?q=popular">
                     See More
                   </NavLink>
                 </li>
@@ -169,33 +169,33 @@ const NavBar = () => {
           </li>
 
           <li className="active">
-            <NavLink to="/meat" className="nav_link">
+            <NavLink to="/recipe?q=meat" className="nav_link">
               Meat & seafood
             </NavLink>
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink className="drpdwn-link" to="/chicken">
+                  <NavLink className="drpdwn-link" to="/recipe?q=chicken">
                     Chicken Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/salmon">
+                  <NavLink className="drpdwn-link" to="/recipe?q=salmon">
                     Salmon Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/pork">
+                  <NavLink className="drpdwn-link" to="/recipe?q=pork">
                     Pork Chop Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/beef">
+                  <NavLink className="drpdwn-link" to="/recipe?q=beef">
                     Ground Beef Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/shrimp">
+                  <NavLink className="drpdwn-link" to="/recipe?q=shrimp">
                     Shrimp Recipes
                   </NavLink>
                 </li>
@@ -203,54 +203,54 @@ const NavBar = () => {
             </div>
           </li>
           <li className="active">
-            <NavLink to="/healthydiet" className="nav_link">
+            <NavLink to="/recipe?q=healthydiet" className="nav_link">
               Healthy & diet
             </NavLink>
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink className="drpdwn-link" to="/keto">
+                  <NavLink className="drpdwn-link" to="/recipe?q=keto">
                     Keto Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/healthy">
+                  <NavLink className="drpdwn-link" to="/recipe?q=healthy">
                     Healthy Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/veg">
+                  <NavLink className="drpdwn-link" to="/recipe?q=veg">
                     Vegetarian Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/vegan">
+                  <NavLink className="drpdwn-link" to="/recipe?q=vegan">
                     Vegan Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/mediterranean">
+                  <NavLink className="drpdwn-link" to="/recipe?q=mediterranean">
                     Mediterranean Diet Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/watchers">
+                  <NavLink className="drpdwn-link" to="/recipe?q=watchers">
                     Weight Watchers Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/crab">
+                  <NavLink className="drpdwn-link" to="/recipe?q=crab">
                     Low-carb Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/gluten">
+                  <NavLink className="drpdwn-link" to="/recipe?q=gluten">
                     Gluten-Free Recipes
                   </NavLink>
                 </li>
                 <br />
                 <li>
-                  <NavLink className="drpdwn-link" to="/healthydiet">
+                  <NavLink className="drpdwn-link" to="/recipe?q=healthydiet">
                     See More
                   </NavLink>
                 </li>
@@ -258,83 +258,83 @@ const NavBar = () => {
             </div>
           </li>
           <li className="active">
-            <NavLink to="/holidays" className="nav_link">
+            <NavLink to="/recipe?q=holidays" className="nav_link">
               Holidays
             </NavLink>
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink to="/dinnerparty" className="drpdwn-link">
+                  <NavLink to="/recipe?q=dinnerparty" className="drpdwn-link">
                     Dinner Party Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/gameday" className="drpdwn-link">
+                  <NavLink to="/recipe?q=gameday" className="drpdwn-link">
                     Game Day Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/valentines" className="drpdwn-link">
+                  <NavLink to="/recipe?q=valentines" className="drpdwn-link">
                     Valentine's Day Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/patricks" className="drpdwn-link">
+                  <NavLink to="/recipe?q=patricks" className="drpdwn-link">
                     St.patrick's Day Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/easter">
+                  <NavLink className="drpdwn-link" to="/recipe?q=easter">
                     Easter Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/cinco">
+                  <NavLink className="drpdwn-link" to="/recipe?q=cinco">
                     Cinco de Mayo Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/mothersday">
+                  <NavLink className="drpdwn-link" to="/recipe?q=mothersday">
                     Mother's Day Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/memorial">
+                  <NavLink className="drpdwn-link" to="/recipe?q=memorial">
                     Memorial Day Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/juneteenth">
+                  <NavLink className="drpdwn-link" to="/recipe?q=juneteenth">
                     Juneteenth Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/july">
+                  <NavLink className="drpdwn-link" to="/recipe?q=july">
                     4th of July Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/halloween">
+                  <NavLink className="drpdwn-link" to="/recipe?q=halloween">
                     Halloween Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/thanksgiving">
+                  <NavLink className="drpdwn-link" to="/recipe?q=thanksgiving">
                     Thanksgiving Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/hanukkah">
+                  <NavLink className="drpdwn-link" to="/recipe?q=hanukkah">
                     Hanukkah Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/christmass">
+                  <NavLink className="drpdwn-link" to="/recipe?q=christmass">
                     Christmass Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/newyear">
+                  <NavLink className="drpdwn-link" to="/recipe?q=newyear">
                     New Year's Recipes
                   </NavLink>
                 </li>
@@ -342,58 +342,58 @@ const NavBar = () => {
             </div>
           </li>
           <li className="active">
-            <NavLink to="/cousine" className="nav_link">
+            <NavLink to="/recipe?q=cousine" className="nav_link">
               cousine
             </NavLink>
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink to="/mexican" className="drpdwn-link">
+                  <NavLink to="/recipe?q=mexican" className="drpdwn-link">
                     Mexican Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/italian" className="drpdwn-link">
+                  <NavLink to="/recipe?q=italian" className="drpdwn-link">
                     Italian Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/indian">
+                  <NavLink className="drpdwn-link" to="/recipe?q=indian">
                     Indian Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/thali">
+                  <NavLink className="drpdwn-link" to="/recipe?q=thali">
                     Thali Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/korean">
+                  <NavLink className="drpdwn-link" to="/recipe?q=korean">
                     Korean Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/french">
+                  <NavLink className="drpdwn-link" to="/recipe?q=french">
                     French Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/latin">
+                  <NavLink className="drpdwn-link" to="/recipe?q=latin">
                     Latin American Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/chinese">
+                  <NavLink className="drpdwn-link" to="/recipe?q=chinese">
                     Chinese Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/japanese">
+                  <NavLink className="drpdwn-link" to="/recipe?q=japanese">
                     Japanese Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="drpdwn-link" to="/spanish">
+                  <NavLink className="drpdwn-link" to="/recipe?q=spanish">
                     Spanish Recipes
                   </NavLink>
                 </li>
@@ -401,34 +401,34 @@ const NavBar = () => {
             </div>
           </li>
           <li className="active">
-            <NavLink to="/seasonal" className="nav_link">
+            <NavLink to="/recipe?q=seasonal" className="nav_link">
               Seasonal
             </NavLink>
             <div classname="dropdown-list">
               <ul className="list">
                 <li>
-                  <NavLink to="/spring" className="drpdwn-link">
+                  <NavLink to="/recipe?q=spring" className="drpdwn-link">
                     Spring Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/summer" className="drpdwn-link">
+                  <NavLink to="/recipe?q=summer" className="drpdwn-link">
                     Summer Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/fall" className="drpdwn-link">
+                  <NavLink to="/recipe?q=fall" className="drpdwn-link">
                     Fall Recipes
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/winter" className="drpdwn-link">
+                  <NavLink to="/recipe?q=winter" className="drpdwn-link">
                     Winter Recipes
                   </NavLink>
                 </li>
                 <br />
                 <li>
-                  <NavLink to="/seasonal" className="drpdwn-link">
+                  <NavLink to="/recipe?q=seasonal" className="drpdwn-link">
                     See More
                   </NavLink>
                 </li>
@@ -436,8 +436,8 @@ const NavBar = () => {
             </div>
           </li>
         </ul>
+        <LogoFile />
       </nav>
-      <LogoFile />
     </>
   );
 };

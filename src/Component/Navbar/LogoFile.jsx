@@ -7,13 +7,17 @@ const LogoFile = () => {
     <div className='logo-box'>
       <ul className='logos'>
         <li>
+          <NavLink to='/search'>
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        </NavLink>
         </li>
         <li>
-        <i class="fa-regular fa-bookmark"></i>
+          <NavLink to="/saverecipe">
+        <i class="fa-regular fa-bookmark" id="saved"></i>
+        </NavLink>
         </li>
         <li>
-       <NavLink to="/login" className="nav_link"><i class="fa-regular fa-user"></i></NavLink> 
+       <NavLink to="/login"><i class="fa-regular fa-user" id="profile"></i></NavLink> 
         </li>
       </ul>
     </div>

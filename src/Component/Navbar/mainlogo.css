@@ -1,9 +1,26 @@
 .logo{
-    color:gold;
+    color:white;
     /* margin:90px 15px; */
-    font-size:3rem;
-    /* padding-left:3rem; */
+    font-size:2.5rem;
+    margin-left:3rem;
     position:absolute;
-    /* top:-30px; */
-    /* left:-40%; */
+    font-family: var(--fonts-base)
+}
+.logo-name{
+    color: white;
+    margin:0;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: 'Merienda', cursive;
+}
+.logo-dot{
+    color:gold;
+    font-size:5rem;
+    margin-left:-30px;
+}
+@media (max-width:1000px){
+    .logo{
+        margin-top:-2rem;
+        margin-left:7rem;
+    }
 }

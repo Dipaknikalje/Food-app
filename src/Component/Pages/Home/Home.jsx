@@ -1,14 +1,19 @@
 import React from 'react'
 import './home.css'
-import Craving from '../Subpages/Craving'
 import { NavLink } from 'react-router-dom'
-
+import Poster from './poster/Poster'
+import Craving from './craving/Craving'
+import Explore from './explore/Explore'
+import Trending from './trending/Trending'
+import Miss from './Miss/Miss'
+import Ideas from './ideas/Ideas'
+import PeelPeach from './peaches/PeelPeach'
+import FooterSearchBar from '../../Footer/FooterSearchBar'
 const Home = () => {
   return (
     <>
+    <Poster/>
     <div className='Home-page'>
-      <div className='image56'>
-      </div>
       <div className='addvertise'>Advertisement</div>
       <div className='comments-section'>
         <div className='heading-btn'>
@@ -85,20 +90,17 @@ const Home = () => {
           </div>
           </div>
       </div>
-      <div>
-      <div className='heading-btn'>
-        <div className='comments-heading'>What we are craving?</div>
-        <NavLink to="/comments" className="allcmt-btn">View All</NavLink>
-        </div>
-        <Craving/>
-      </div>
-      <div>
-        <h1>EXPLORE MORE</h1>
-        <div className='more-dishes'>
-          <img src="https://www.food.com/ideas/summer-grilling-6564" alt=""/>
-          <p>Grilling & BBQ</p>
-        </div>
-      </div>
+      <Craving/>
+      <Explore/>
+      <div className="ad-explore"></div>
+      <br/>
+      <Trending/>
+      <Miss/>
+      <Ideas/>
+      <div className="ad-idea"></div>
+      <PeelPeach/>
+      <br/>
+      <FooterSearchBar/>
     </div>
     </>
   )

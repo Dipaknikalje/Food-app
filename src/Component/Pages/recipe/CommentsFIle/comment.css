@@ -1,0 +1,123 @@
+.detail_commets_head{
+    font-family: var(--fonts-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    --current-line-height: 24px;
+}
+
+.comments_cntr {
+    padding-bottom: 3rem;
+}
+
+.detailed_smile-emoji{
+    color: #f5ce35;
+    font-size: 3rem;
+    display: flex;
+    border: 1px solid #f5ce35;
+    /* width: 2.6rem; */
+    /* height: 2.2rem; */
+    border-radius: 50%;
+    background-color: black;
+    align-items: center;
+}
+
+
+.comments_input_line {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fonts-base);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    --current-line-height: 24px;
+    letter-spacing: 0;
+    gap: 24px;
+    padding-top: 2rem;
+}
+
+.comments_input_line input {
+    height: 48px;
+    border: 2px solid #BFBFBF;
+    border-radius: 100px;
+    padding-left: 24px;
+    align-self: flex-end;
+    flex-grow: 3;
+    font-size: 16px;
+}
+
+.comments_input_line button{
+    
+    flex-grow: 1;
+    font-family: var(--fonts-heading);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    --current-line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color .2s;
+    border: navajowhite;
+}
+
+.comments_submit{
+    background-color: #f5ce35;
+}
+
+.comments_signup{
+    background-color: #77e2e1;
+}
+
+
+/* comments css */
+
+/* comments css */
+
+.comments_display_card {
+    margin-bottom: 16px;
+    border: 2px solid #F2F2F2;
+    border-radius: 4px;
+    padding: 10px;
+    /* display: flex;
+    align-items: center;  */
+  }
+  
+  .main_cntnt-cmnt {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .comments_smile-emoji{
+        width: 6%;
+        /* flex-basis: 35px; */
+        /* flex-shrink: 0; */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 20px;
+    }
+    .comment_text {
+        flex-grow: 1; /* Grow to take available space */
+      }
+    
+      .cmnt_text {
+        width: 80%;
+    }
+    
+    .detail_comment_base{
+        display: flex;
+        width: 100%;
+        padding: 5px;
+        justify-content: flex-end;
+        align-items: center;
+    
+    }

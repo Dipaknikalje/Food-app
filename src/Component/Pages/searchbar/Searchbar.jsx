@@ -1,4 +1,5 @@
 import React, { useEffect,useState } from 'react'
+import FooterSearchRecipe from '../../Footer/FooterSearchRecipe';
 
 const Searchbar = () => {
     const [data,setData]=useState([]);
@@ -70,6 +71,9 @@ const Searchbar = () => {
              
 }
 }
+const handleClear=()=>{
+  setContent(null)
+}
 
   return (
     <div className="searchbar-page">
@@ -82,6 +86,7 @@ const Searchbar = () => {
                 I WANT TO MAKE
               </label>
               <ul className="listed-content">
+              <i class="fa-solid fa-magnifying-glass" id="serachbar"></i>
                 <li
                   className="content-text"
                   onClick={() => {
@@ -101,7 +106,7 @@ const Searchbar = () => {
                   />
                 </li>
                 <div className="close-content">
-                  <li className="clr">clear</li>
+                  <li className="clr" onClick={handleClear}>clear</li>
                   <li className="emp">
                   </li>
                 </div>
@@ -127,6 +132,7 @@ const Searchbar = () => {
           {recipeData()}
         </div>
       </div>
+      <FooterSearchRecipe/>
     </div>
   )
 }

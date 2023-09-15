@@ -2,6 +2,9 @@
     position:relative;
     width:100%;
 }
+#searchbar{
+    color:black;
+}
 .searchbar-content{
     background-color: black;
     box-sizing: border-box;
