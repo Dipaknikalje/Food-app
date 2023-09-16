@@ -124,7 +124,7 @@ const RecipeBook = () => {
             <div className="discover-btn-container">
               <div className="discover-btn-wrapper">
                 <div>
-                  <NavLink to="/recipe?q=trending now">
+                  <NavLink to="/recipe">
                     <BsPlusCircleFill />
                     <p>DISOCVER RECIPES</p>
                   </NavLink>

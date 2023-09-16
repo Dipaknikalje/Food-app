@@ -6,6 +6,7 @@ import { AiOutlineCamera } from 'react-icons/ai'
 import { AiFillCamera } from 'react-icons/ai'
 import axios from 'axios'
 import FooterSearchRecipe from '../../../Footer/FooterSearchRecipe'
+import { host } from '../../../Utility/HostLink'
 
 const AddRecipe = () => {
 
@@ -27,7 +28,7 @@ const AddRecipe = () => {
 
     const handleSubmit = async () => {
         try {
-            await axios.post('http://localhost:7070/recipes/saverecipe', {
+            await axios.put(`${host}/recipe/saverecipe`, {
                 recipeTitle, recipeDescription, recipeCategory, recipePrepTime, recipeCookTime, recipeServes, recipeIngredients, recipeDirections, recipeSaveRecipeAs,
                 // headers: {
                 //     'Authorization': "Bearer " + token

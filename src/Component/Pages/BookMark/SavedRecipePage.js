@@ -48,7 +48,7 @@ const SavedRecipePage = ({ recipe }) => {
           </div>
           {recipeData.map((element, index) => (
             <div id="saved-page-added-from-recipes">
-              <NavLink to={`/details/:${element.recipe.label}`}>
+              <NavLink to={`/details?q=:${element.recipe.label}`}>
                 <img src={element.recipe.image} alt=""></img>
               </NavLink>
               <h3>{element.recipe.label}</h3>

@@ -6,7 +6,7 @@ import userPic from '../../../Assets/profile.jpg'
 
 const User = () => {
     const email = localStorage.getItem('email')
-
+console.log("user-page running")
     const params = useParams()
 
     return (
@@ -31,7 +31,7 @@ const User = () => {
                     </div>
                 </div>
                 <div id='user-profile-page-username'>
-                    <p>@{email.substring(0, email.length - 10)}</p>
+                    <p>@{email}</p>
                 </div>
                 <div id='user-profile-page-filters'>
                     <div id='user-profile-page-filters-container'>
