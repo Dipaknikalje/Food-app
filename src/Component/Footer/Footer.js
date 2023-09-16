@@ -1,11 +1,21 @@
 import React from "react";
-import "./footer.css";
-// import { NavLink } from "react-router-dom";
-const Footer = () => {
+import './footer.css'
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+function Footer() {
   return (
-    <div className="Footer_bar">
-      <div className="Footer-bar-child1">
-        <div className="icons">
+    <div className="footer">
+      <div className="footer_sub">
+       
+        <div className="footer_cnt1">
+          <div className="footer_1st_div">
+         
+          <div className="footer_img_cntnr">
           <div>
             <i class="fab fa-facebook"></i>
           </div>
@@ -21,41 +31,50 @@ const Footer = () => {
           <div>
             <i class="fa fa-envelope-o" color="white"></i>
           </div>
-          <div>
-            <i class="fa fa-arrow-up" aria-hidden="true" color="white"></i>
+
+        </div> 
+           
+
+          <div className="scrollArrow" onClick={scrollToTop}>
+          <i class="fa fa-arrow-up" aria-hidden="true" color="white"></i>
           </div>
-          <div>Back to top</div>
+          <div className="scrollText" onClick={scrollToTop}>
+            Back to Top
+          </div>
         </div>
-        <div className="footer-nav">
-          <div>AllCategories</div>
-          <div>Site Map</div>
-          <div>About us</div>
-          <div>Help</div>
+        <ul className="footer_2nd_div">
+          <li>All Categories</li>
+          <li>Site Map</li>
+          <li>About Us</li>
+          <li>Help</li>
+        </ul>
+
         </div>
-      </div>
-      <div className="Footer-bar-child2">
-        <div className="discovery">The Discovery of networks</div>
-        <div className="copyright">
-          © 2023 Warner Bros. Discovery, Inc. or its subsidiaries and
-          affiliates. All rights reserved.
-        </div>
-        <br />
-        <div className="Footer-nav2">
-          <ul className="ul1">
-            <li>Advertise</li>
-            <li>AdChoices</li>
-            <li>Privacy Notice</li>
-            <li>Visitor Agreement</li>
-          </ul>
-          <ul className="ul2">
-            <li>California</li>
-            <li>Privacy Notice</li>
-            <li>Do Not Sell or Share My Personal Information</li>
-          </ul>
+
+        {/* <div > */}
+      
+        {/* </div> */}
+        <div className="footer_cnt2">
+          <div className="footer_cnt3">
+          <div className="blue">The Discovery Family of Networks </div>
+<div>© 2022 Warner Bros. Discovery, Inc. or its subsidiaries and affiliates.</div>
+<div>All rights reserved.</div>
+
+          </div>
+          <div className="footer_cnt4">
+            <ul className="footer_advetise">
+
+          <li>Advertise</li>
+<li>AdChoices</li>
+<li>Privacy Notice</li>
+<li>Visitor Agreement</li>
+            </ul>
+            <div className="california">California Privacy Notice <div>Do Not Sell or Share My Personal Information</div></div>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Footer;

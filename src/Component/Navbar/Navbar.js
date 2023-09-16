@@ -1,13 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
-import LogoFile from "./LogoFile";
-import MainLogo from "./MainLogo";
-const NavBar = () => {
+// import MainLogo from "./MainLogo";
+const Navbar = () => {
+  // const [dropDown, setDropDown] = useState(false);
+  // const onMouseEnter = () => {
+  //   setDropDown(true);
+  // };
+  // const onMouseLeave = () => {
+  //   setDropDown(false);
+  // };
   return (
     <>
       <nav>
-        <MainLogo />
+        {/* <MainLogo /> */}
         <input type="checkbox" id="check" />
         <div className="label">
           <label for="check">
@@ -15,7 +21,11 @@ const NavBar = () => {
             <i class="fas fa-x" id="cancel"></i>
           </label>
         </div>
-        <ul className="main-nav-list">
+        <ul
+          className="main-nav-list"
+          // onMouseEnter={onMouseEnter}
+          // onMouseLeave={onMouseLeave}
+        >
           <li className="active">
             <NavLink to="/" className="nav_link">
               Recipe
@@ -436,10 +446,9 @@ const NavBar = () => {
             </div>
           </li>
         </ul>
-        <LogoFile />
       </nav>
     </>
   );
 };
 
-export default NavBar;
+export default Navbar;

@@ -2,6 +2,7 @@ import React from 'react'
 import './user.css'
 import { NavLink, useParams } from 'react-router-dom'
 import FooterSearchRecipe from '../../Footer/FooterSearchRecipe'
+import userPic from '../../../Assets/profile.jpg'
 
 const User = () => {
     const email = localStorage.getItem('email')
@@ -16,7 +17,7 @@ const User = () => {
                 <div  id='main-body'>
                 <div id='user-profile-page-profile-photo-followers-following'>
                     <div id='user-profile-page-profile-photo'>
-                       <img src='https://img.sndimg.com/food/image/upload/fl_progressive,c_fill,q_80,h_202,w_202/v1/gk-static/gk/img/avatar/taco.png' alt='profile'/>
+                       <img src={userPic} alt='profile'/>
                     </div>
                     <div id='user-profile-page-followers-following'>
                         <div>
@@ -46,7 +47,7 @@ const User = () => {
                             <NavLink to='/userprofile/following' activeClassName='active'>Following</NavLink>
                         </div>
                         <div>
-                            <h3>{params.filtername.toUpperCase()}</h3>
+                            <h3>{params.filtername}</h3>
                         </div>
                     </div>
                 </div>

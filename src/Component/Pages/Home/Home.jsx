@@ -36,7 +36,6 @@ const Home = () => {
                 </span>
               </p>
             </span>
-            <br/>
             <p className="text-comment">So this is my first try at cinnamon raisin bread and the only step I missed is brushing with oil/crisco I before baking. Also I split one loaf separate before I added raisins because I have coworkers who hate raisins (I love them!) I haven’t</p>
 
             <h3 className="time-cook">5 Hour Ago</h3>

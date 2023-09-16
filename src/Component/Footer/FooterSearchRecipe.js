@@ -74,7 +74,7 @@ const FooterSearchRecipe = () => {
           <div id="i-want-to-make-search-search-data-cards-container">
             {data.map((element, index) => (
               <div id="i-want-to-make-search-search-data-cards">
-                <Link to={`/recipedescription/${element.recipe.label}`}>
+                <Link to={`/details/${element.recipe.label}`}>
                   <img src={element.recipe.image} alt=""></img>
                 </Link>
                 <h3>{element.recipe.label}</h3>

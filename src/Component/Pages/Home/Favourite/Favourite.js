@@ -15,17 +15,23 @@ const Favourite = () => {
 
   return (
     <div>
-      <div className="trending-recipe-page">
-        {data.map((item, itemIndex) => (
-          <div className="trendingimgs-card">
-            <div key={itemIndex} className="trendingimgs">
-              <NavLink>
-                <img src={item.recipe.image} alt="PINEAPPLE ZUCCHINI BREAD" />
-                <p>{item.recipe.label}</p>
-              </NavLink>
-            </div>
-          </div>
-        ))}
+      <div className="fav-cards-wrapper">
+        {data
+          ? data.map((item, index) => {
+              return (
+                <div className="fav-card">
+                  <NavLink to={`/details?q=${item.recipe.label}`}>
+                    <div className="fav-img">
+                      <img src={item.recipe.image} alt={item.label} />
+                    </div>
+                    <div className="fav-dish">
+                      <p>{item.recipe.label}</p>
+                    </div>
+                  </NavLink>
+                </div>
+              );
+            })
+          : "Loading"}
       </div>
     </div>
   );

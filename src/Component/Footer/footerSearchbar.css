@@ -6,6 +6,7 @@
     padding: 2rem 0;
     text-align: center;
     width: 100%;
+    margin-left:50px;
 }
 
 #find-more-recipes h2{
@@ -58,6 +59,9 @@
 #find-more-recipes-search-data{
     margin-top: 3rem;
 }
+#find-more-recipes-search-data p{
+    margin-left:50px;
+}
 
 #find-more-recipes-search-data h2{
     margin-bottom: 3rem;
@@ -107,7 +111,6 @@
 
 
 
-/* I WANT TO MAKE SEARCH */
 
 
 

@@ -1,142 +1,132 @@
-.Footer_bar{
+.footer {
     background-color: black;
-    color: #ffffff;
-    min-height: 15rem;
-    width:100%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position:relative;
-    bottom:0;
-}
-.Footer-bar-child1 {
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-start;
-
-}
-.icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding-top: 2rem;
-}
-.icons div{
-    margin:1rem;
-    font-size:1rem;
-}
-.footer-nav{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    font-size:1rem;
-}
-.footer-nav div{
-    margin:1rem;
-}
-.Footer-bar-child2{
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-end;
-    font: size 1rem;
-    position:relative;
-    top:-60px;
-    right:2rem;
-}
-.discovery{
-    position:relative;
-    left:270px;
-
-}
-.copyright{
-    font-size:1rem;
-    font-weight: -100;
-}
-.Footer-nav2 ul{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.Footer-nav2 ul li{
-    margin:0.5rem;
-    font-size:1rem;
-}
-.ul1{
-    position:relative;
-    left:180px;
-}
-.ul2{
-    position:relative;
-    left:120px;
-}
-.link{
-    text-decoration: none;
-    color: #ffffff;
-}
-.link:hover{
-    color:red;
-}
-
-@media  (min-width:300px) and (max-width:1000px){
-
-
-    .Footer_bar{
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        /* position: absolute; */
-        bottom: 0;
-        width: 100%;
-        height:20%;
-    }
+     position: relative;
+     padding: 16px 30px;
+     color: #fff;
+     width:100%;
+   }
  
-    .contact {
-       padding-top: 2.5rem;
-    }
-
-    .Footer_bar_width {
-        width: 100%;
-    }
-    .link{
-        text-decoration: none;
-        color: #ffffff;
-    }
-    .link:hover{
-        color:red;
-    }
-
-}
-
-
-@media (max-width:600px){
-
-     
-    .container1 {
-        display: block;
-        margin:2rem;
-    }
+   .footer_1st_div{
+     display: flex;
+   }
+   
+   .scrollArrow{
+     cursor: pointer;
+     font-size: 19px;
+     color: #fff;
+     padding-left: 1rem;
+     padding-right: 1rem;
+   }
+ 
+   .footer_cnt1{
+     display: flex;
+     flex-direction: column;
+     width: 50%;
+   }
+ 
+   .scrollText{
+     cursor: pointer;
+     font-size: 16px;
+  color: #ffff;
+  font-size: 12pt;
+   }
+ 
+ .footer_img_cntnr{
+   list-style: none;
+ display: flex;
+ padding-left: 0;
+ gap:15px;
+   }
+ 
+   .footer_2nd_div{
+     list-style: none;
+ display: flex;
+ padding-left: 0;
+ font-size: 10pt;
+ 
+   }
+ 
+   .footer_img_cntnr li{
+     width: 40px;
+     height: 40px;
+     color: #fff;
+   }
+ 
+   .footer_sub{
+     display: flex;
+     flex-wrap: wrap;
+   }
+ 
+   .blue{
+     color: #77E2E1;
+   }
   
-  .contact {
-    position: relative;
-      left: 1rem;
-      width: 80%;
-      font-size: 14px;
-      gap: 1px;
-      padding-top: 1rem;
-  }
-  .Reference {
-    position: relative;
-      left: 1rem;
-      width: 80%;
-      font-size: 14px;
-      gap: 1px;
-  }
-  .link{
-    text-decoration: none;
-    color: #ffffff;
-}
-.link:hover{
-    color:red;
-}
-}
+ 
+   .footer_cnt2 {
+     display: flex;
+     flex-direction: column;
+     width: 50%;
+     font-size: 8pt;
+ }
+ .footer_cnt3 {
+   text-align: right;
+ }
+ 
+ .footer_cnt4 {
+   text-align: right;
+ }
+ 
+ .footer_2nd_div li{
+   
+   padding: 7px 14px 0 0;
+ }
+ 
+ .california{
+  display: flex;
+  justify-content: flex-end;
+ }
+ 
+ .footer_advetise{
+   list-style: none;
+   display: flex;
+   padding-left: 0;
+   justify-content: flex-end;
+ }
+ 
+ .footer_advetise li {
+   
+   padding: 7px 14px 0 0;
+ }
+ 
+ 
+ @media (max-width:600px){
+  
+   .footer_sub{
+   display: block;
+ }
+ 
+ .footer_cnt1{
+   width: 100%;
+   }
+ 
+   .footer_cnt2{
+     width: 100%;
+     }
+ 
+     .footer_cnt3 {
+       text-align: start;
+       padding-top: 10px;
+   }
+ 
+   .footer_cnt4 {
+     text-align: start;
+ }
+ 
+ .california {
+  display: block;
+ }
+ 
+ .footer_advetise {
+   justify-content: flex-start;
+ }
+ }

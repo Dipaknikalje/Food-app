@@ -1,5 +1,5 @@
 .yellow-container{
-    width: 90%;
+    width: 100%;
     background-color: rgb(255, 221, 0);
     height: 3rem;
     display: flex;
@@ -24,6 +24,12 @@
     justify-content: space-between;
     margin-top: 2rem;
 }
+
+.detail-wrapper
+{
+    width: 60%;
+    /* margin: auto; */
+}
 .ad-container{
     height: 80vh;
     width: 20rem;
@@ -32,9 +38,10 @@
 }
 .ad-wrapper{
     position: sticky;
-    top: 17rem;
-    height: 50vh;
-    width: 90%;
+    top: 10rem;
+    height: 70vh;
+    width: 100%;
+    /* background-image:url(); */
 }
 
 .title-wrapper{
@@ -53,7 +60,7 @@
 }
 
 .submitted-wrapper{
-    width: 90%;
+    width: 100%;
     margin-top: 1rem;
 }
 .submitted-wrapper div{
@@ -61,7 +68,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-    font-size:1rem ;
+    font-size:1.3rem ;
 }
 
 .submitted-wrapper div img{
@@ -70,9 +77,24 @@
     border-radius: 50%;
 }
 
+.source-name{
+    color: blue;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.submitted-wrapper p span{
+    font-size: 1.3rem;
+    columns: black;
+}
+
+.comment{
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
 .save-download-wrapper{
     display: flex;
-    width: 90%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1rem;
@@ -110,46 +132,184 @@
 }
 
 .imgs-wrapper{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 .imgs-wrapper img{
     border-radius: 5px;
 }
 
 .big-img-wrapper{
-    width: 90%;
+    width: 100%;
 }
 .big-img-wrapper img{
-    height: 26rem;
-    width: 90%;
+    height:32rem;
+    width: 100%;
 }
 
 .small-imgs-wrapper{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 1rem;
     justify-content: space-between;
 }
-.recipe-directions{
-   display: flex;
-    flex-direction:column;
+
+.ready-in-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.ingredients_cntnr{
-    padding: 1rem;
+
+.ready-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.ready-box p{
+    width: 40%;
+}
+
+.nutrition-box p{
+    color: blue;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.direction-ingredient-wrapper{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.direction-wrapper{
+    line-height: 1.5rem;
+    width: 40%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.direction-wrapper ol{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ingredient-wrapper{
+    width: 40%;
+}
+
+.ingredient-wrapper {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.also-love-container{
+    display: flex;
+    flex-direction:column ;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.also-love-container h3{
+    font-size: 2rem;
+}
+.also-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.also-box{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.also-img{
+    height: 65%;
+}
+
+.also-title{
+    height: 25%;
+}
+
+.also-img img{
+    width: 100%;
+    height: 100%;
+}
+.also-box a{
+    height: 13rem;
+}
+
+@media only screen and (min-width:250px) and (max-width:1110px){
+    .ad-container{
+        display: none;
     }
-    
-    .ingredients_list{
-        font-size: 20px;
-        padding: 1rem 0;
-        word-wrap: break-word;
+    .detail-wrapper{
+        width: 90%;
+        margin: auto;
     }
-    
-    .ingredients_list li{
-        padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width:250px) and (max-width:900px){
+    .title-wrapper h2{
+        font-size: 1.9rem;
     }
+    .submitted-wrapper div {
+        font-size: 1.1rem;
+    }
+
+    .also-box a{
+        height: 13rem;
+    }
+    .saved-print-wrapper{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .saved-print-wrapper img{
+        width: 3.5rem;
+    }
+    .big-img-wrapper img{
+        height: 25rem;
+    }
+
+    .i-made-this-wrapper{
+        display: none;
+    }
+    .saved-print-wrapper img{
+        padding: 0.3rem ;
+    }
+}
+
+@media only screen and (min-width:250px) and (max-width:768px){
+    .ready-box{
+        flex-direction: column;
+    }
+
+    .direction-ingredient-wrapper{
+        flex-direction: column;
+
+    }
+    .direction-wrapper{
+        width: 90%;
+    }
+    .ingredient-wrapper{
+        width: 90%;
+    }
+}

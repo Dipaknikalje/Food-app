@@ -31,3 +31,19 @@
  .peach-description{
     font-size: 1.1rem;
  }
+
+ @media  (min-width:250px) and (max-width:900px){
+   .peach-page{
+      flex-direction: column;
+      width: 90%;
+   }
+   .peach-pic-card {
+      width: 100%;
+   }
+   .peach-description-card{
+      width: 100%;
+   }
+   .peach-description-card p{
+      display: none;
+   }
+ }

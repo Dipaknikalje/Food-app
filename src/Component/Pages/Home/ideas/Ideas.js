@@ -13,33 +13,33 @@ const Ideas = () => {
       <div className="trending-recipe-page">
         <div className="trending-labol">
           <h1>MORE IDEAS</h1>
-          <NavLink>View All</NavLink>
+          <NavLink to="/recipe?q=ideas">View All</NavLink>
         </div>
 
         <div className="trendingimgs-card">
           <div className="trendingimgs">
-            <NavLink>
+            <NavLink to="/recipe?q=vegan bacon">
               <img src={ideasImg1} alt="VEGAN BACON" />
               <p>VEGAN BACON</p>
             </NavLink>
           </div>
 
           <div className="trendingimgs">
-            <NavLink>
+            <NavLink to="/recipe?q=copycat">
               <img src={ideasImg2} alt="COPYCAT MC DONALD'S BIG MAC SAUCE" />
               <p>COPYCAT MC DONALD'S BIG MAC SAUCE</p>
             </NavLink>
           </div>
 
           <div className="trendingimgs">
-            <NavLink>
+            <NavLink to="/recipe?q=quick">
               <img src={ideasImg3} alt="QUICK & EASY CHICKEN ENCHILADAS" />
               <p>QUICK & EASY CHICKEN ENCHILADAS</p>
             </NavLink>
           </div>
 
           <div className="trendingimgs">
-            <NavLink>
+            <NavLink to="/recipe?q=butter beer">
               <img src={ideasImg4} alt="DIRTY SHRIMP IN BUTTER BEER SAUCE" />
               <p>DIRTY SHRIMP IN BUTTER BEER SAUCE</p>
             </NavLink>

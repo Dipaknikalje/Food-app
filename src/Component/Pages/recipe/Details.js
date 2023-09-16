@@ -3,12 +3,15 @@ import { useLocation } from "react-router-dom";
 import { fetchRecipeDetails } from "../../Utility/FetchApi/FetchApi";
 import "./details.css";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import { BsCamera, BsDownload, BsSave } from "react-icons/bs";
 import { BsPrinter } from "react-icons/bs";
 import { BsShare } from "react-icons/bs";
 import FooterSearchRecipe from "../../Footer/FooterSearchRecipe";
-// import Comments from "./CommentsFIle/Comments";
+// import AddRecipe from "./AddRecipe/AddRecipe";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { host } from "../../Utility/HostLink";
 
 const Details = () => {
   const [data, setData] = useState(null);
@@ -17,17 +20,80 @@ const Details = () => {
 
   const queryParams = new URLSearchParams(location.search);
 
-  //  getting query params from url
   const query = queryParams.get("q");
 
   console.log(query);
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    getRecipes();
+  });
+
+  //   useEffect(()=>{
+  //     const API = `http://localhost:7070/recipe/saverecipe`
+  //       axios.post(API)
+  //       .then(res=>setSavesData(res.data))
+  //       .catch(err=>console.log(err))
+  //     },[])
+  //   const handleRecipe = async (item) => {
+  //     const api = "http://localhost:7070/recipe/saverecipe";
+  //     const response = await axios.post(api, item);
+  //     setRecipe(response.data);
+  //     console.log(recipe);
+  //   };
+
+  //  else {
+  //     toast.info("Please login first to add recipe", {
+  //       position: toast.POSITION.TOP_RIGHT,
+  //     });
+  const getRecipes = async () => {
+    try {
+      const response = await axios.get(`${host}/recipe/${query}`);
+      setRecipes(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  // const headers = {
+  //   Authorization: `Bearer ${token}`,
+  // };
+
+  // const handleRecipe = () => {
+  //   const API = `${host}/recipe/saverecipe`;
+
+  //   axios
+  //     .put(
+  //       API,
+  //       {
+  //         userId,
+  //         recipeName: recipes[0].recipe.label,
+  //         recipe: recipes[0].recipe,
+  //       },
+  //       {
+  //         headers: headers,
+  //       }
+  //     )
+  //     .then((response) => {
+  //       console.log(response);
+  //       toast.success(`${recipes[0].recipe.label} added to saves`, {
+  //         position: toast.POSITION.TOP_RIGHT,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   const handleSaveRecipe = async (recipe) => {
     const token = localStorage.getItem("token");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-    axios.put("http://localhost:7070/saverecipe", recipe).then((res) => {
+    axios.put(`${host}/recipe/saverecipe`, recipe).then((res) => {
       console.log(res);
+      toast.success(`${recipes[0].recipe.label} added to saves`, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     });
   };
 
@@ -72,6 +138,7 @@ const Details = () => {
                     handleSaveRecipe(data[0].recipe);
                   }}
                 />
+                {/* <AddRecipe /> */}
                 <BsDownload />
                 <BsPrinter />
                 <BsShare />
@@ -108,43 +175,108 @@ const Details = () => {
             </div>
 
             <div className="ready-in-wrapper">
-              <div className="">
-                <div>
-                  <p>Ready In:{data[0].recipe.totalTime} min</p>
-                </div>
+              <div className="ready-box">
+                <p>Ready In:{data[0].recipe.totalTime} min</p>
+                <p> Yeilds:{data[0].recipe.yield}</p>
+                <p>Ingredients:{data[0].recipe.ingredients.length}</p>
+                <p>Serves:{data[0].recipe.yield}</p>
+              </div>
+              <div className="nutrition-box">
+                <p>Nutrition information</p>
               </div>
             </div>
 
             <div className="direction-ingredient-wrapper">
-              <div className="direction-wrapper"></div>
+              <div className="direction-wrapper">
+                <h3>DIRECTIONS</h3>
+                <ol>
+                  <li>
+                    Wash and prep all your ingredients, such as chopping
+                    vegetables, measuring out spices, and marinating meats.
+                    Having everything ready makes the cooking process smoother.
+                  </li>
+
+                  <li>
+                    Preheat your oven, stovetop, grill, or any cooking surface
+                    you'll be using to the specified temperature. This ensures
+                    even cooking.
+                  </li>
+
+                  <li>
+                    Use the appropriate pots, pans, and utensils for the recipe.
+                    Nonstick pans, cast iron skillets, and oven-safe dishes are
+                    examples of different cookware for various purposes.
+                  </li>
+
+                  <li>
+                    Cook ingredients in the order specified in the recipe. This
+                    often means starting with aromatics (like onions and garlic)
+                    before adding proteins, vegetables, or grains.
+                  </li>
+
+                  <li>
+                    Stir or toss ingredients periodically to ensure even cooking
+                    and prevent sticking or burning. Use a spatula, wooden
+                    spoon, or tongs as needed.
+                  </li>
+
+                  <li>
+                    When the dish is ready, carefully plate it, arranging the
+                    food attractively. Garnish with fresh herbs, grated cheese,
+                    or other finishing touches, as specified.
+                  </li>
+
+                  <li>
+                    Serve the dish immediately, if possible, while it's hot and
+                    at its best. Certain dishes may require resting time before
+                    serving.
+                  </li>
+                  <li>
+                    After cooking, wash dishes, pots, pans, and utensils
+                    promptly. This ensures an easier cleanup and maintains the
+                    cleanliness of your kitchen.
+                  </li>
+                </ol>
+              </div>
               <div className="ingredient-wrapper">
-                {/* <div className="ingredients_cntnr">
-                  <h2>INGREDIENTS</h2>
-
-                  <ol className="ingredients_list" type="1">
-                    <li>{data[0].recipe.ingredientLines}</li>
-                  </ol>
-                </div> */}
-
-                <div className="ingredients_cntnr">
-                  <h2 className="direction-label">Direction </h2>
-                  <ul className="ingredients_list ">
-                    {data[0].recipe.ingredientLines?.map((line, index) => (
-                      <li key={index} className="flex gap-5">
-                        <span className="text-sm font-cabin">{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <h3>INGREDIENTS</h3>
+                {data[0].recipe.ingredientLines.map((item, index) => {
+                  return <p>{item}</p>;
+                })}
               </div>
             </div>
+            {data.length > 2 && (
+              <div className="also-love-container">
+                <h3>YOU'LL ALSO LOVE</h3>
+                <div className="also-wrapper">
+                  {data &&
+                    data.splice(1, 4).map((item, index) => {
+                      return (
+                        <div className="also-box">
+                          <NavLink to={`/details?q=${item.recipe.label}`}>
+                            <div className="also-img ">
+                              {" "}
+                              <img src={item.recipe.image} alt="img" />
+                            </div>
+
+                            <div className="also-title">
+                              <p>{item.recipe.label}</p>
+                            </div>
+                          </NavLink>
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="ad-container">
             <div className="social-icons"></div>
-            <div className="ad-wrapper"></div>
+            <div className="ad-wrapper ad">
+              {/* <img src={ad} alt="adverise" /> */}
+            </div>
           </div>
-          {/* <Comments/> */}
         </div>
       ) : (
         "Loading"

@@ -1,7 +1,7 @@
 
-/* .home-page{
-    font-size:62.5%;
-} */
+.home-page{
+    min-height:0px;
+}
 .addvertise{
     height:80px;
     background-color:#d9d9d9;
@@ -47,8 +47,8 @@
    justify-content:space-between;
    padding:100px;
    width:100%;
-   margin-left:3rem;
-   margin-right:3rem;
+   margin-left:2rem;
+   margin-right:2rem;
 }
 .user-review{
     position:relative;
@@ -65,7 +65,7 @@
 }
 .user-conent-review{
     display:flex;
-    margin:4px;
+    /* margin:4px; */
     align-items: center;
 }
 .time-cook{
@@ -75,14 +75,19 @@
     left:20px;
 }
 .text-user{
-    font-size:large;
+    font-size:medium;
+    /* margin-top:-100px; */
+}
+.text-comment{
 }
 .username{
     color:#1769c2
 }
 .text-comment{
-    font-size:large;
+    font-size:small;
     color:#666;
+    position:relative;
+    top:-50px;
 }
 .user-icon{
     width:50px;
@@ -94,4 +99,275 @@
     bottom:10px; 
     right:110px;
     font-size:small;
+}
+@media only screen and (min-width:250px) and (max-width:840px) {
+   .addvertise {
+      height: 80px;
+      background-color: #d9d9d9;
+      height: 10rem;
+      padding-top: 10%;
+      margin: auto;
+      width: 88%;
+  }
+   
+  .comments-heading {
+   font-size: 2rem;
+}
+
+.comments {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   width: 100%;
+   /* margin-left: 3rem; */
+   margin: auto;
+   /* margin-right: 3rem; */
+}
+.user-review {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   border: 2px black;
+   /* margin: 20px; */
+   /* column-gap: 1.75rem; */
+   height: 300px;
+   width: 300px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   opacity: 1;
+   column-gap: 1rem;
+   padding: 10px;
+}
+.text-comment {
+    font-size: small;
+    color: #666;
+    margin-top: 0px;
+}
+
+  .main-post-title-wrapper{
+   position: relative;
+   top: 35%;
+   left: 0;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-items: flex-start;
+   width: 90%;
+   /* margin: auto; */
+  }
+
+  .main-post-title-wrapper h1{
+   font-size: 2.4rem;
+   color: black;
+   width: 100%;
+}
+
+
+  .main-post-title-wrapper a{
+   width: 11rem;
+  }
+
+.craving-container{
+   width: 90%;
+   margin-top: 5rem;
+}
+
+.craving-imgs-wrapper{
+   flex-direction: column;
+}
+
+.below-main-ad-container{width: 90%;}
+
+.craving-imgs-wrapper{
+   /* gap: 2rem; */
+   /* justify-content: space-between; */
+}
+
+.craving-imgs{
+   width: 100%;
+}
+
+.craving-imgs a img{
+   width: 100%;
+   height: 17rem;
+}
+
+.explore-more-container{
+   width: 90%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex-wrap: wrap;
+}
+
+.explore-more-img-wrapper{
+   flex-wrap: wrap;
+   gap: 1rem;
+   overflow: hidden;
+}
+
+.explore-more-img-wrapper div{
+   width: 30%;
+}
+
+.explore-more-dishes{
+   font-size: 0.7rem;
+}
+
+.trending-now-container{
+   width: 90%;
+   scroll-behavior: smooth;
+}
+
+.trending-title{
+   position: relative;
+}
+
+.trending-imgs-wrapper{
+   overflow-x:scroll ;
+}
+
+.trending-imgs{
+   /* width: 70vw; */
+   width: max-content;
+}
+
+.dont-miss-container {
+   width: 90%;
+}
+
+.dont-miss-imgs-wrapper{
+   flex-direction: column;
+   align-items: center;
+}
+.dont-miss-imgs-wrapper img{
+   height: 20rem;
+}
+
+.dont-miss-imgs{
+   width: 100%;
+}
+
+.more-ideas-now-container{
+   width: 90%;
+}
+
+.more-ideas-imgs-wrapper{
+   flex-direction: column;
+   align-self: center;
+}
+.more-ideas-imgs a img{
+   height: 20rem;
+}
+.more-ideas-imgs{
+   width: 100%;
+}
+
+.peel-peaches-container{
+   flex-direction: column;
+   width: 90%;
+}
+
+.peech-img-wrapper{
+   width: 100%;
+}
+
+.peech-desc-wrapper{
+   width: 100%;
+}
+
+.peech-desc-wrapper p{
+   display: none;
+}
+
+
+.comments-container{
+   width: 90%;
+   gap: 1rem;
+}
+.comments-txt{
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+
+.comments-wrapper{
+   flex-direction: column;
+   height: 100%;
+}
+.comments-card{
+   width: 100%;
+   padding: 1rem;
+}
+.user-name{
+}
+.user-name img{
+   width: 3rem;
+   height: 3rem;
+}
+.fav-container{
+
+   overflow-x: scroll;
+}
+
+.fav-title-wrapper{
+   position: sticky;
+   top: 0rem;
+   left: 0rem;
+}
+.fav-cards-wrapper{
+   flex-wrap: nowrap;
+   width: max-content;
+   gap: 2rem;
+   
+}
+
+.below-explore-ad-container{
+   width: 90%;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+.below-more-ideas-ad-container{
+   width: 90%;
+}
+}
+
+@media only screen and (min-width:200px) and (max-width:500px) {
+.main-post-title-wrapper h1{
+   font-size: 1.5rem;
+}
+
+.explore-more-container h2{
+   font-size: 1.4rem;
+}
+.trending-title h2{
+   font-size: 1.4rem;
+}
+
+.trending-title a{
+   font-size:1rem ;
+}
+
+.dont-miss-title h2{
+   font-size: 1.4rem;
+}
+
+.more-ideas-title h2{
+   font-size: 1.4rem;
+}
+
+.more-ideas-title a{
+   font-size: 1rem;
+}
+
+.peech-desc-wrapper{
+   padding: 1rem;
+}
+
+.fav-title-wrapper h3{
+   font-size:1.4rem;
+}
+.fav-title-wrapper a{
+   font-size:1rem;
+}
 }

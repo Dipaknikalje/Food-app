@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import closeIcon from "../../Assets/cancel_8618474.png";
 import { useState } from "react";
 import axios from "axios";
+import { host } from "../Utility/HostLink";
 
 const RegisterPage = () => {
   const [user, setUser] = useState({
@@ -20,7 +21,7 @@ const RegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     console.log(user);
-    const res = await axios.post("http://localhost:7070/user/register", user);
+    const res = await axios.post(`${host}/user/register`, user);
     console.log(res);
     if ((res.data.msg = "user registered successfully")) {
       localStorage.setItem("token", res.data.token);

@@ -37,7 +37,7 @@ const FooterSearchBar = () => {
                         {
                             data.map((element, index) => (
                                 <div id='find-more-recipes-search-data-cards' key={index}>
-                                    <Link to={`/recipedescription/${element.recipe.label}`} ><img src={element.recipe.image} alt=''></img></Link>
+                                    <Link to={`/details/${element.recipe.label}`} ><img src={element.recipe.image} alt=''></img></Link>
                                     <h3 id="find-more-recipes-search-data-cards-heading">{element.recipe.label}</h3>
                                 </div>
                             ))

@@ -5,15 +5,15 @@ import closeIcon from "../../Assets/cancel_8618474.png";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setIsLoggedIn } from "../Utility/Redux/CartSlice";
+import { host } from "../Utility/HostLink";
+// import { useDispatch } from "react-redux";
 
 const Login = () => {
   const nav = useNavigate();
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const state = useSelector((state) => console.log(state.value));
-  const [data,setData]=useState([])
+  // const [data,setData]=useState([])
 
   const [errMsg, setErrMsg] = useState(null);
 
@@ -29,16 +29,19 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:7070/user/login", user);
+    const res = await axios.post(`${host}/user/login`, user);
     console.log(res.data.msg);
-    const status = res.data.msg;
-    setData(res.data);
+    const token = res.data.token;
+    console.log(res.data)
 
-    if (status === "User logged in successfully") {
-      dispatch(setIsLoggedIn(true));
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("data",data);
+    if (token) {
+      
+      localStorage.setItem("token",res.data.token)
+      localStorage.setItem("loggedIn", true)
+      localStorage.setItem("email",res.data.userData.email)
+      localStorage.setItem("userId",res.data.userData._id)
       nav("/")
+      window.location.reload()
     }
     setErrMsg(res.data.msg);
   };

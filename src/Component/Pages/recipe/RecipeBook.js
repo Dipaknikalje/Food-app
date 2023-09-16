@@ -4,8 +4,10 @@ import { fetchRecipe } from "../../Utility/FetchApi/FetchApi";
 import "./saverecipe.css";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-import { BsPlusCircle } from "react-icons/bs";
-const SaveRecipe = () => {
+import { BsPlusCircleFill } from "react-icons/bs";
+import FooterSearchRecipe from "../../Footer/FooterSearchRecipe";
+import { host } from "../../Utility/HostLink";
+const RecipeBook = () => {
   const [showSearchBar, setShowSearchbar] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [data, setData] = useState(null);
@@ -42,13 +44,11 @@ const SaveRecipe = () => {
   const fetchSavedRecipes = async () => {
     try {
       const token = localStorage.getItem("token");
-      axios.defaults.headers.common["Authorization"] = `Beare ${token}`;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-      const res = await axios.get(
-        "http://localhost:7070/fetch-recipe/:user_id"
-      );
-      console.log(res.data.saved);
-      setData(res.data.saved);
+      const resp = await axios.get(`${host}/recipe/fetchrecipe`);
+      console.log(resp.data);
+      setData(resp.data.saved.saved_recipes);
     } catch (err) {
       console.log(err);
     }
@@ -67,8 +67,12 @@ const SaveRecipe = () => {
               <p>SAVES</p>
             </div>
             <div className="edit-wrapper">
-            <i class="fa-solid fa-magnifying-glass" onClick={handleSearchBar}></i> |{" "}
-              <p>EDIT</p>
+              <i
+                class="fa-solid fa-magnifying-glass"
+                id="search"
+                onClick={handleSearchBar}
+              ></i>
+              | <p>EDIT</p>
             </div>
           </div>
         )}
@@ -78,7 +82,7 @@ const SaveRecipe = () => {
             <div className="save-search-bar-wrapper">
               <div className="search-icon">
                 <button className="btn" onClick={handleSearch}>
-                  <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                  <i class="fa-solid fa-magnifying-glass" id="search"></i>{" "}
                 </button>
               </div>
 
@@ -120,13 +124,17 @@ const SaveRecipe = () => {
             <div className="discover-btn-container">
               <div className="discover-btn-wrapper">
                 <div>
-                  <BsPlusCircle />
-                  <p>DISOCVER RECIPES</p>
+                  <NavLink to="/recipe?q=trending now">
+                    <BsPlusCircleFill />
+                    <p>DISOCVER RECIPES</p>
+                  </NavLink>
                 </div>
 
                 <div>
                   <p>....or....</p>
-                  <p>Add Your Own Recipe</p>
+                  <NavLink to="/addrecipe">
+                    <p>Add Your Own Recipe</p>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -145,10 +153,6 @@ const SaveRecipe = () => {
                             <p className="label">{item.label}</p>
                             <p className="rating">By {item.source}</p>
                           </div>
-
-                          <div className="rating">
-                            <p>rating</p>
-                          </div>
                         </div>
                       </NavLink>
                     </div>
@@ -159,9 +163,30 @@ const SaveRecipe = () => {
         </div>
       )}
 
-      {showBoards}
+      {showBoards && (
+        <div className="saved-recipe-container">
+          <div className="saved-recipe">
+            <div className="sorting">
+              <div>SORT BY :</div>
+              <div className="sort-by">
+                <p className="newest-txt">Newest</p> |<p className="a-z">A-Z</p>
+              </div>
+            </div>
+
+            <div className="discover-btn-container">
+              <div className="discover-btn-wrapper">
+                <div>
+                  <BsPlusCircleFill />
+                  <p>NEW BOARD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      <FooterSearchRecipe />
     </>
   );
 };
 
-export default SaveRecipe;
+export default RecipeBook;

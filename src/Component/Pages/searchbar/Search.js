@@ -31,7 +31,7 @@ const Search = () => {
 
             <div className="search-icon">
               <button className="btn" onClick={handleSearch}>
-              <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                <i class="fa-solid fa-magnifying-glass" id="search"></i>
               </button>
             </div>
           </div>
@@ -42,8 +42,6 @@ const Search = () => {
             className="input-bar"
             onChange={handleOnChange}
           />
-
-          <p className="clear-txt">clear </p>
         </div>
       </div>
 
@@ -92,7 +90,7 @@ const Search = () => {
           </div>
         </div>
       </div>
-      <FooterSearchRecipe/>
+      <FooterSearchRecipe />
     </>
   );
 };

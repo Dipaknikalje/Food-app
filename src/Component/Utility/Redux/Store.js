@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import SliceReducer from "./CartSlice";
-
+import UserLoggedReducer from "./UserLoggedSlice";
 const Store = configureStore({
   reducer: {
-    value: SliceReducer,
+    recipe: SliceReducer,
+    userControl: UserLoggedReducer,
+
   },
 });
 

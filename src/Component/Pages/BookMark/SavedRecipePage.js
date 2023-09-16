@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { BsPlusCircle } from "react-icons/bs";
 import axios from "axios";
 import Searchbar from "../searchbar/Searchbar";
+import { host } from "../../Utility/HostLink";
 
 const SavedRecipePage = ({ recipe }) => {
   // const token = localStorage.getItem('token')
@@ -16,7 +17,7 @@ const SavedRecipePage = ({ recipe }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:7070/fetch-recipe/:user_id", {})
+      .get(`${host}/recipe/fetchrecipe`, {})
       .then((response) => setData(response.data))
       .catch((error) => console.log("Error", error));
   }, []);
