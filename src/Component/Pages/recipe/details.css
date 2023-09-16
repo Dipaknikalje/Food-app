@@ -295,6 +295,10 @@
     .saved-print-wrapper img{
         padding: 0.3rem ;
     }
+    .small-imgs-wrapper{
+        display:flex;
+        flex-direction:column;
+    }
 }
 
 @media only screen and (min-width:250px) and (max-width:768px){

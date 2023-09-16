@@ -28,20 +28,22 @@ const AddRecipe = () => {
 
     const handleSubmit = async () => {
         try {
-            await axios.put(`${host}/recipe/saverecipe`, {
-                recipeTitle, recipeDescription, recipeCategory, recipePrepTime, recipeCookTime, recipeServes, recipeIngredients, recipeDirections, recipeSaveRecipeAs,
-                // headers: {
-                //     'Authorization': "Bearer " + token
-                // }
-            })
-                .then(res => {
-                    if (res.data.message === "Your Recipe Added Successfully") {
+            const token = localStorage.getItem("token");
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+      const resp = await axios.put(`${host}/recipe/saverecipe`,{
+           recipeTitle, recipeDescription, recipeCategory, recipePrepTime, recipeCookTime, recipeServes, recipeIngredients, recipeDirections, recipeSaveRecipeAs,
+                
+            });
+               resp.then(res => {
+                    if (res.data) {
                         alert("Your Recipe Added Successfully!!!")
                     }
                 })
         }
         catch (err) {
             console.log(err)
+            // alert("failed to upload")
         }
         navigate('/saverecipe')
     }

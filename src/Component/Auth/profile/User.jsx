@@ -11,15 +11,15 @@ console.log("user-page running")
 
     return (
         <>
-            <div id='user-profile-page'>
-                <div id='user-profile-page-gradient'>
+            <div id='profile-user'>
+                <div id='profile-user-gradient'>
                 </div>
                 <div  id='main-body'>
-                <div id='user-profile-page-profile-photo-followers-following'>
-                    <div id='user-profile-page-profile-photo'>
+                <div id='profile-user-profile-photo-followers-following'>
+                    <div id='profile-user-profile-photo'>
                        <img src={userPic} alt='profile'/>
                     </div>
-                    <div id='user-profile-page-followers-following'>
+                    <div id='profile-user-followers-following'>
                         <div>
                             <p>FOLLOWERS</p>
                             <p>0</p>
@@ -30,11 +30,11 @@ console.log("user-page running")
                         </div>
                     </div>
                 </div>
-                <div id='user-profile-page-username'>
+                <div id='profile-user-username'>
                     <p>@{email}</p>
                 </div>
-                <div id='user-profile-page-filters'>
-                    <div id='user-profile-page-filters-container'>
+                <div id='profile-user-filters'>
+                    <div id='profile-user-filters-container'>
                         <div>
                             <p>FILTERS</p>
                             <NavLink to='/userprofile/activity' activeClassName='active'>Activity</NavLink>

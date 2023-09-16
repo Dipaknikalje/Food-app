@@ -6,6 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { host } from "../Utility/HostLink";
+import { toast } from "react-toastify";
 // import { useDispatch } from "react-redux";
 
 const Login = () => {
@@ -38,10 +39,12 @@ const Login = () => {
       
       localStorage.setItem("token",res.data.token)
       localStorage.setItem("loggedIn", true)
-      localStorage.setItem("email",res.data.userData.email)
-      localStorage.setItem("userId",res.data.userData._id)
-      nav("/")
+      localStorage.setItem("email",res.data.email)
+      nav('/')
       window.location.reload()
+      toast.success("Logged In Successfully", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
     setErrMsg(res.data.msg);
   };

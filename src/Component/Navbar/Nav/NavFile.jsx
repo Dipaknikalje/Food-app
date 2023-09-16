@@ -7,6 +7,7 @@ import { IoIosSearch } from "react-icons/io";
 import { BsBookmark, BsEmojiSmileFill } from "react-icons/bs";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import { MenuItems } from "./MenuItems";
+import { toast } from "react-toastify";
 const NavFile=()=> {
   const [isMobile, setIsMobile] = useState(false);
   const [openItems, setOpenItems] = useState({});
@@ -19,6 +20,9 @@ const NavFile=()=> {
   const logout = () => {
       localStorage.clear()
       navigate('/')
+      toast.error("Logged out Successfully", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
   }
  
 

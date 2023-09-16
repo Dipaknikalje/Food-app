@@ -23,13 +23,13 @@ const FooterSearchRecipe = () => {
   };
   return (
     <>
-      <div id="i-want-to-make">
+      <div id="pink-searchbar">
         <div>
-          <div id="i-want-to-make-container">
-            <div id="i-want-to-make-search-bar-and-text-container">
-              <div id="i-want-to-make-search-bar-and-text">
+          <div id="pink-searchbar-container">
+            <div id="pink-searchbar-search-bar-and-text-container">
+              <div id="pink-searchbar-search-bar-and-text">
                 <h3>I WANT TO MAKE</h3>
-                <div id="i-want-to-make-search-bar">
+                <div id="pink-searchbar-search-bar">
                   <AiOutlineSearch fontSize="1.5rem" />
                   <input
                     type="search"
@@ -44,8 +44,8 @@ const FooterSearchRecipe = () => {
               </div>
             </div>
           </div>
-          <div id="i-want-to-make-suggested">
-            <div id="i-want-to-make-suggested-container">
+          <div id="pink-searchbar-suggested">
+            <div id="pink-searchbar-suggested-container">
               <div>
                 <Link to="">healthy lunches</Link>
               </div>
@@ -68,13 +68,13 @@ const FooterSearchRecipe = () => {
           </div>
         </div>
       </div>
-      <div id="i-want-to-make-search-search-data">
+      <div id="pink-searchbar-search-search-data">
         {/* <h2>SEARCH RESULTS . . .</h2> */}
-        <div id="i-want-to-make-search-search-data-container">
-          <div id="i-want-to-make-search-search-data-cards-container">
+        <div id="pink-searchbar-search-search-data-container">
+          <div id="pink-searchbar-search-search-data-cards-container">
             {data.map((element, index) => (
-              <div id="i-want-to-make-search-search-data-cards">
-                <Link to={`/details/${element.recipe.label}`}>
+              <div id="pink-searchbar-search-search-data-cards">
+                <Link to={`/details?q=${element.recipe.label}`}>
                   <img src={element.recipe.image} alt=""></img>
                 </Link>
                 <h3>{element.recipe.label}</h3>

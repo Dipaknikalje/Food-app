@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import Store from '../Utility/Redux/Store'
 import { Provider } from 'react-redux'
+import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify'
 import NavFile from '../Navbar/Nav/NavFile'
 

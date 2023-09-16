@@ -57,6 +57,19 @@ const RecipeBook = () => {
   useEffect(() => {
     fetchSavedRecipes();
   }, []);
+  const deleteRecipe = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      const resp = await axios.put(`${host}/recipe/deleterecipe`);
+      resp.then((res) => {
+        console.log(res.data);
+      });
+    } catch (error) {
+      console.log(error);
+      window.location.reload();
+    }
+  };
 
   return (
     <>
@@ -155,6 +168,10 @@ const RecipeBook = () => {
                           </div>
                         </div>
                       </NavLink>
+                      <i
+                        class="fa-sharp fa-solid fa-trash"
+                        onClick={deleteRecipe}
+                      ></i>
                     </div>
                   );
                 })

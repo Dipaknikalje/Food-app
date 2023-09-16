@@ -23,11 +23,11 @@ const Details = () => {
   const query = queryParams.get("q");
 
   console.log(query);
-  const [recipes, setRecipes] = useState([]);
+  // const [recipes, setRecipes] = useState([]);
 
-  useEffect(() => {
-    getRecipes();
-  });
+  // useEffect(() => {
+  //   getRecipes();
+  // });
 
   //   useEffect(()=>{
   //     const API = `http://localhost:7070/recipe/saverecipe`
@@ -46,14 +46,14 @@ const Details = () => {
   //     toast.info("Please login first to add recipe", {
   //       position: toast.POSITION.TOP_RIGHT,
   //     });
-  const getRecipes = async () => {
-    try {
-      const response = await axios.get(`${host}/recipe/${query}`);
-      setRecipes(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  // const getRecipes = async () => {
+  //   try {
+  //     const response = await axios.get(`${host}/recipe/${query}`);
+  //     setRecipes(response.data);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
 
   // const headers = {
   //   Authorization: `Bearer ${token}`,
@@ -89,9 +89,9 @@ const Details = () => {
     const token = localStorage.getItem("token");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-    axios.put(`${host}/recipe/saverecipe`, recipe).then((res) => {
-      console.log(res);
-      toast.success(`${recipes[0].recipe.label} added to saves`, {
+    axios.put(`${host}/recipe/saverecipe`).then((res) => {
+      console.log(res.data);
+      toast.success(`recipes added to saves`, {
         position: toast.POSITION.TOP_RIGHT,
       });
     });
