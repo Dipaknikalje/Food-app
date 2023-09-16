@@ -35,7 +35,7 @@ const RegisterPage = () => {
 
   return (
     <>
-      <div className="overlay"></div>
+      <div className="blurr-background"></div>
       <div className="register-content">
         <div className="close-btn-mainbox">
           <img onClick={handlePopup} alt="close button" src={closeIcon} />

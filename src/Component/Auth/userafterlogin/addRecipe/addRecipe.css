@@ -3,18 +3,18 @@
 
 
 
-#addbyuser-page{
+#useradded-recipe{
     background-color: rgb(238, 238, 238);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#addbyuser-page-container{
+#useradded-recipe-container{
     width: 70%;
 }
 
-#addbyuser-page h2{
+#useradded-recipe h2{
     font-family: 'Anton', sans-serif;
     font-size: 3rem;
     letter-spacing: 0.1rem;
@@ -22,12 +22,12 @@
     margin-bottom: 2rem;
 }
 
-#addbyuser-page form{
+#useradded-recipe form{
     display: flex;
     flex-direction: column;
 }
 
-#addbyuser-page input[type=text]{
+#useradded-recipe input[type=text]{
     background-color: white;
     width: 100%;
     padding-left: 1rem;
@@ -35,7 +35,7 @@
     border: 1px solid gray;
 }
 
-#addbyuser-page textarea{
+#useradded-recipe textarea{
     background-color: white;
     width: 100%;
     height: 10rem;
@@ -45,69 +45,69 @@
     margin-bottom: 3rem;
 }
 
-#addbyuser-page h3{
+#useradded-recipe h3{
     font-size: 1.7rem;
 }
 
-#addbyuser-page hr{
+#useradded-recipe hr{
     width: 100%;
     height: 0.1rem;
     background-color: black;
     margin-bottom: 1rem;
 }
 
-#addbyuser-page p{
+#useradded-recipe p{
     margin-bottom: 1rem;
     line-height: 2rem;
 }
 
-#addbyuser-page a{
+#useradded-recipe a{
     font-weight: 900;
     text-decoration: none;
     color: purple;
 } 
 
-#addbyuser-page a:hover{
+#useradded-recipe a:hover{
     border-bottom: 1px solid purple;
 } 
 
-#addbyuser-page h4{
+#useradded-recipe h4{
     font-size: 1.4rem;
 }
 
-#addbyuser-page input[type=radio]{
+#useradded-recipe input[type=radio]{
     accent-color: black;
     margin-top: 2rem;
     margin-bottom: 2rem;
     cursor: pointer;
 }
 
-#addbyuser-page input[type=radio]:nth-child(3){
+#useradded-recipe input[type=radio]:nth-child(3){
     margin-left: 4rem;
 }
 
-#addbyuser-page label{
+#useradded-recipe label{
     margin-left: 0.5rem;
 }
 
-#addbyuser-page-submit-btn-cancel-text{
+#useradded-recipe-submit-btn-cancel-text{
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-#addbyuser-page-submit-btn-cancel-text div{
+#useradded-recipe-submit-btn-cancel-text div{
     display: flex;
     gap: 1rem;
 }
 
-#addbyuser-page-submit-btn-cancel-text p:nth-child(2){
+#useradded-recipe-submit-btn-cancel-text p:nth-child(2){
     font-weight: 900;
     color: purple;
     cursor: pointer;
 }
 
-#addbyuser-page button{
+#useradded-recipe button{
     margin-top: 2rem;
     margin-bottom: 3rem;
     width: 100%;
@@ -120,13 +120,13 @@
     cursor: pointer;
 }
 
-#addbyuser-page-photo-timings{
+#useradded-recipe-photo-timings{
     display: flex;
     gap: 3rem;
     margin-bottom: 2rem;
 }
 
-#addbyuser-page-photo{
+#useradded-recipe-photo{
     width:36.5%;
     height: 15rem;
     position: relative;
@@ -135,31 +135,31 @@
     cursor: pointer;
 }
 
-#addbyuser-page-photo-make-it-shine-camera-icon-one{
+#useradded-recipe-photo-make-it-shine-camera-icon-one{
     margin-top: 3rem;
 }
 
-#addbyuser-page-photo-make-it-shine-camera-icon-one p{
+#useradded-recipe-photo-make-it-shine-camera-icon-one p{
     color: white;
     font-size: 1.5rem;
     font-weight: 900;
 }
 
-#addbyuser-page-photo-camera-icon-one{
+#useradded-recipe-photo-camera-icon-one{
     font-size: 4rem;
     color: white;
 }
 
-#addbyuser-page-photo-recipe-image{
+#useradded-recipe-photo-recipe-image{
     width: 19.9rem;
     height: 12.2rem;
 }
 
-#addbyuser-page-photo input[type=file]{
+#useradded-recipe-photo input[type=file]{
     display: none;
 }
 
-#addbyuser-page-photo-add-your-photo-btn{
+#useradded-recipe-photo-add-your-photo-btn{
     width: 100%;
     height: 2.8rem;
     position: absolute;
@@ -170,28 +170,28 @@
     background-color: aquamarine;
 }
 
-#addbyuser-page-photo-camera-icon-two{
+#useradded-recipe-photo-camera-icon-two{
     font-size: 1.5rem;
     position: relative;
     top: 0.4rem;
     left: -0.2rem;
 }
 
-#addbyuser-page-photo label{
+#useradded-recipe-photo label{
     padding: 0.3rem;
 }
 
-#addbyuser-page-photo-add-your-photo-btn:hover{
+#useradded-recipe-photo-add-your-photo-btn:hover{
     background-color: aqua;
 }
 
-#addbyuser-page-timings input[type=text]{
+#useradded-recipe-timings input[type=text]{
     width: 15%;
     height: 2.5rem;
     margin-top: 0.5rem;
 }
 
-#addbyuser-page-timings select{
+#useradded-recipe-timings select{
     width: 53%;
     height: 2.5rem;
     margin-left: 1rem;
@@ -200,13 +200,13 @@
     color: purple;
 }
 
-#addbyuser-page-save-recipe-as div{
+#useradded-recipe-save-recipe-as div{
     display: flex;
     width: 15%;
     align-items: center;
 }
 
-#addbyuser-page-submit-btn-cancel-text button{
+#useradded-recipe-submit-btn-cancel-text button{
 width: 25%;
 }
 
@@ -214,43 +214,43 @@ width: 25%;
 
 
 @media screen and (max-width:723px){
-    #addbyuser-page {
+    #useradded-recipe {
         width: 100%;
     }
     
-    #addbyuser-page-container {
+    #useradded-recipe-container {
         width: 80%;
     }
     
-    #addbyuser-page h2 {
+    #useradded-recipe h2 {
         font-size: 2rem;
         margin-top: 2rem;
         margin-bottom: 3rem;
     }
     
-    #addbyuser-page input[type=text] {
+    #useradded-recipe input[type=text] {
         margin-left: 0;
         width: 100%;
         font-size: 1.5rem;
         padding-left: 2rem;
     }
     
-    #addbyuser-page textarea {
+    #useradded-recipe textarea {
         width: 100%;
         padding-left: 2rem;
         font-size: 1.5rem;
     }
     
-    #addbyuser-page h3 {
+    #useradded-recipe h3 {
         font-size: 1.8rem;
     }
     
-    #addbyuser-page hr {
+    #useradded-recipe hr {
         width: 100%;
         margin-bottom: 3rem;
     }
     
-   #addbyuser-page-category{
+   #useradded-recipe-category{
     width: 100%;
     font-size: 1.4rem;
    }
@@ -261,7 +261,7 @@ width: 25%;
 
 
 
-#addbyuser-page-photo-timings{
+#useradded-recipe-photo-timings{
     display: flex;
     flex-direction: column;
     gap: 0rem;
@@ -270,7 +270,7 @@ width: 25%;
 }
 
 
-#addbyuser-page-photo{
+#useradded-recipe-photo{
     width: 100%;
     height: 15rem;
     position: relative;
@@ -279,32 +279,32 @@ width: 25%;
     cursor: pointer;
 }
 
-#addbyuser-page-photo-make-it-shine-camera-icon-one{
+#useradded-recipe-photo-make-it-shine-camera-icon-one{
     margin-top: 3rem;
     font-size: 1rem;
 }
 
-#addbyuser-page-photo-make-it-shine-camera-icon-one p{
+#useradded-recipe-photo-make-it-shine-camera-icon-one p{
     color: white;
     font-size: 1rem;
     font-weight: 900;
 }
 
-#addbyuser-page-photo-camera-icon-one{
+#useradded-recipe-photo-camera-icon-one{
     font-size: 4rem;
     color: white;
 }
 
-#addbyuser-page-photo-recipe-image{
+#useradded-recipe-photo-recipe-image{
     width: 100%;
     height:30vh;
 }
 
-#addbyuser-page-photo input[type=file]{
+#useradded-recipe-photo input[type=file]{
     display: none;
 }
 
-#addbyuser-page-photo-add-your-photo-btn{
+#useradded-recipe-photo-add-your-photo-btn{
     width: 100%;
     height: 2.8rem;
     position: absolute;
@@ -315,28 +315,28 @@ width: 25%;
     background-color: aquamarine;
 }
 
-#addbyuser-page-photo-camera-icon-two{
+#useradded-recipe-photo-camera-icon-two{
     font-size: 1.5rem;
     position: relative;
     top: 0.4rem;
     left: -0.2rem;
 }
 
-#addbyuser-page-photo label{
+#useradded-recipe-photo label{
     padding: 0.3rem;
 }
 
-#addbyuser-page-photo-add-your-photo-btn:hover{
+#useradded-recipe-photo-add-your-photo-btn:hover{
     background-color: aqua;
 }
 
-#addbyuser-page-timings input[type=text]{
+#useradded-recipe-timings input[type=text]{
     width: 30%;
     height: 2.5rem;
     margin-top: 0rem;
 }
 
-#addbyuser-page-timings select{
+#useradded-recipe-timings select{
     width: 63%;
     height: 2.6rem;
     margin-left: 0.8rem;
@@ -346,7 +346,7 @@ width: 25%;
 }
 
 
-#addbyuser-page-save-recipe-as div{
+#useradded-recipe-save-recipe-as div{
     width: 20%;
     height: 10vh;
     margin: 0;
@@ -372,91 +372,91 @@ width: 25%;
 
 /* 
 
-    #addbyuser-page p {
+    #useradded-recipe p {
         margin-bottom: 2rem;
         line-height: 3rem;
         font-size: 3rem;
     }
     
-    #addbyuser-page a {
+    #useradded-recipe a {
         font-size: 3rem;
     }
     
-    #addbyuser-page h4 {
+    #useradded-recipe h4 {
         font-size: 4rem;
         margin-bottom: 0rem;
     }
     
-    #addbyuser-page input[type=radio] {
+    #useradded-recipe input[type=radio] {
         width: 3rem;
         height: 3rem;
         margin-bottom: 3rem;
     }
     
     
-    #addbyuser-page-submit-btn-cancel-text div{
+    #useradded-recipe-submit-btn-cancel-text div{
         align-items: center;
         margin-top: 3rem;
     }
     
-    #addbyuser-page button {
+    #useradded-recipe button {
         width: 20rem;
         height: 5rem;
         font-size: 3rem;
         margin-top: 4rem;
     }
     
-    #addbyuser-page-photo {
+    #useradded-recipe-photo {
         width: 30rem;
         height: 25rem;
     }
     
-    #addbyuser-page-photo-make-it-shine-camera-icon-one p {
+    #useradded-recipe-photo-make-it-shine-camera-icon-one p {
         font-size: 3rem;
         margin-top: 3rem;
     }
     
-    #addbyuser-page-photo-camera-icon-one {
+    #useradded-recipe-photo-camera-icon-one {
         font-size: 7rem;
         margin-top: 2rem;
     }
     
-    #addbyuser-page-photo-recipe-image {
+    #useradded-recipe-photo-recipe-image {
         width: 30rem;
         height: 25rem;
     }
     
-    #addbyuser-page-photo-add-your-photo-btn {
+    #useradded-recipe-photo-add-your-photo-btn {
         width: 30rem;
         height: 4rem;
         top: 19rem;
     }
     
-    #addbyuser-page-photo-camera-icon-two {
+    #useradded-recipe-photo-camera-icon-two {
         font-size: 2.5rem;
         position: relative;
         top: 0.4rem;
         left: -0.2rem;
     }
     
-    #addbyuser-page-photo label {
+    #useradded-recipe-photo label {
         font-size: 2.5rem;
     }
     
-    #addbyuser-page-timings input[type=text] {
+    #useradded-recipe-timings input[type=text] {
         width: 8rem;
         height: 5rem;
         margin-top: 0.5rem;
     }
     
-    #addbyuser-page-timings select {
+    #useradded-recipe-timings select {
         width: 15rem;
         height: 5rem;
         margin-left: 2rem;
         font-size: 2.5rem;
     }
     
-    #addbyuser-page-timings h5{
+    #useradded-recipe-timings h5{
         font-size: 3rem;
         margin-bottom: 1rem;
     } */

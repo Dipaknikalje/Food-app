@@ -54,7 +54,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="overlay"></div>
+      <div className="blurr-background"></div>
       <div className="mainbox-data">
         <div className="close-btn-mainbox">
           <img onClick={handlePopup} alt="close button" src={closeIcon} />

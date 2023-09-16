@@ -5,7 +5,6 @@ import { toast } from 'react-toastify'
 
 const Profile = () => {
   const [show,setShow]=useState(localStorage.getItem('loggedIn'))
-  // const cart=useSelector(state=>state.cart)
   console.log(show)
   const handleLogout=()=>{
     localStorage.clear();

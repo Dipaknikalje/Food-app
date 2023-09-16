@@ -28,18 +28,18 @@
 
 //   return (
 //     <>
-//       <div id="saved-page">
-//         <div id="saved-page-header">
+//       <div id="bookmark-page">
+//         <div id="bookmark-page-header">
 //           <h2>SAVES</h2>
 //         </div>
-//         <div id="saved-page-recipes-my-boards">
+//         <div id="bookmark-page-recipes-my-boards">
 //           <NavLink to="/saved/recipes">RECIPES</NavLink>
 //           <NavLink to="/saved/myboards">MY BOARDS</NavLink>
 //         </div>
-//         <div id="saved-page-recipes">
+//         <div id="bookmark-page-recipes">
 //           <div id="discover-recipes-card">
 //             <BsPlusCircle
-//               id="saved-page-recipes-plus-icon"
+//               id="bookmark-page-recipes-plus-icon"
 //               onClick={() => navigate("/")}
 //             />
 //             <h3 onClick={() => navigate("/")}>DISCOVER &nbsp;RECIPES</h3>
@@ -47,7 +47,7 @@
 //             <NavLink to="/addRecipe">Add Your Own Recipe</NavLink>
 //           </div>
 //           {recipeData.map((element, index) => (
-//             <div id="saved-page-added-from-recipes">
+//             <div id="bookmark-page-added-from-recipes">
 //               <NavLink to={`/details?q=:${element.recipe.label}`}>
 //                 <img src={element.recipe.image} alt=""></img>
 //               </NavLink>

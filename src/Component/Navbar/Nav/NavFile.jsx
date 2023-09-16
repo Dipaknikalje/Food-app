@@ -9,7 +9,7 @@ import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import { MenuItems } from "./MenuItems";
 import { toast } from "react-toastify";
 const NavFile=()=> {
-  const [isMobile, setIsMobile] = useState(false);
+  const [mobileView, setMobileView] = useState(false);
   const [openItems, setOpenItems] = useState({});
   const [dropdown, setDropdown] = useState(false)
 
@@ -27,7 +27,7 @@ const NavFile=()=> {
  
 
   const handleMobileView = () => {
-    setIsMobile(!isMobile);
+    setMobileView(!mobileView);
   };
 
   const handleMenu = (index) => {
@@ -47,12 +47,12 @@ const NavFile=()=> {
       <header>
         <div className="links-container">
           <button id="mobile-menu-icon" onClick={handleMobileView}>
-            {isMobile ? <RxCross2 /> : <GiHamburgerMenu />}
+            {mobileView ? <RxCross2 /> : <GiHamburgerMenu />}
           </button>
           <Link to="/" className="links"><h1 className="logo">
             Food<span>.</span>
           </h1></Link>
-          <nav id={isMobile ? "main-nav-mobile" : "main-nav"}>
+          <nav id={mobileView ? "main-nav-mobile" : "main-nav"}>
             <ul type="none" className="nav-list">
               
               {MenuItems.map((item, index) => (
