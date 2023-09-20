@@ -10,7 +10,6 @@ const FooterSearchRecipe = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
 
-
   const getSearchRecipes = (searchQuery) => {
     axios
       .get(
@@ -32,11 +31,14 @@ const FooterSearchRecipe = () => {
                   <AiOutlineSearch fontSize="1.5rem" />
                   <input
                     type="search"
-                    placeholder="Search here or try our suggestions below"
+                    placeholder="Search here "
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   ></input>
-                  <button onClick={() => getSearchRecipes(search)}>
+                  <button
+                    id="search-btn"
+                    onClick={() => getSearchRecipes(search)}
+                  >
                     SEARCH
                   </button>
                 </div>

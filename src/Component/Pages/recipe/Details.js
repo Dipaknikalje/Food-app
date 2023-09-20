@@ -238,7 +238,7 @@ const Details = () => {
                             </div>
 
                             <div className="also-title">
-                              <p>{item.recipe.label}</p>
+                              {/* <p>{item.recipe.label}</p> */}
                             </div>
                           </NavLink>
                         </div>

@@ -25,7 +25,7 @@
     margin: auto;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     background-color: white;
     border-bottom: 6px solid purple;
     padding: 0.1rem;
@@ -114,17 +114,44 @@
     border-bottom: 5px solid aqua;
 }
 
+.search-result-container{
+    width: 100%;
+    /* height: 100%; */
+
+    background-color: rgb(232, 232, 232);
+}
+
+.search-result-wrapper{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+.searched-recipe-wrapper{
+    flex-basis: calc(25% - 20px);
+    background-color: #ffffff;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    border-bottom: 5px solid aqua;
+}
+
 .search-result-wrapper a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 .searched-recipe-img{
     height: 50%;
     overflow-y: hidden;
 }
 .searched-recipe-img img{
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
 }
 
@@ -134,6 +161,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
+    overflow-y: hidden;
+
 }
 
 .searched-recipe-name-rating-wrapper div{
@@ -150,14 +179,39 @@
     font-weight: 500;
 }
 
-@media only screen and (min-width:250px) and (max-width:840px) {
-    .searched-recipe-wrapper{
-        flex-basis: calc(80% - 20px);
-        background-color: #ffffff;
-        display: flex;
-        cursor: pointer;
+@media only screen and (min-width:250px) and (max-width:768px){
+    .search-result-wrapper{
         flex-direction: column;
-        border-bottom: 5px solid aqua;
+        width: 90%;
+
     }
 
+    .searched-recipe-wrapper a{
+        flex-direction: row;
+        height: 10rem;
+        justify-content: flex-start;
+
+    }
+    .searched-recipe-wrapper p{
+        font-size:0.6rem;
+    }
+
+    .searched-recipe-img{
+        height: 100%;
+        width: 50%;
+    } 
+    .searched-recipe-img img{
+        width: 100%;
+    }
+    .searched-recipe-name-rating-wrapper{
+        width: 50%;
+        height: 100%;
+    }
+
+    .recipe-source{
+        padding-left: 1rem;
+    }
+    .recipe-time{
+        font-size:0.6rem;
+    }
 }
