@@ -48,8 +48,7 @@ button{
     z-index: 1011;
 }
 .nav-list-item-text{
-    font-size:0.9rem;
-    font-weight: 800;
+    font-size:0.8rem;
     font-family: var(--fonts-heading);
     text-transform: uppercase;
 }
