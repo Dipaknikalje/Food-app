@@ -365,11 +365,11 @@ header{
 
 .navbar-logged-in-dropdown-content{
     padding: 1% 2%;
-    font-size:0.9rem;
-    width: 100%;
-    text-align: right;
-    height: 165px; /* Set a fixed height */
-    overflow-y: hidden; 
+    font-size: 0.9rem;
+    width: 15%;
+    text-align: left;
+    height: 140px;
+    overflow-y: hidden;
 }
 .navbar-logged-in-dropdown-content a{
     padding: 0% 0;
@@ -485,15 +485,15 @@ header{
     flex-direction: column;
     background-color: #000000;
     padding: 1% 2%;
-    font-size:0.7rem;
-    width: 100%;
-    text-align: right;
+    font-size: 0.7rem;
+    width: 25%;
+    text-align: left;
     position: absolute;
-    top: 100%; /* Position it just below the profile icon */
-    right: 0;  /* Position it to the right */
-    height: 120px; /* Set a fixed height */
-    overflow-y: hidden; 
-   z-index: 1000; /* Adjust the value as needed */
+    top: 100%;
+    right: 0;
+    height: max-content;
+    overflow-y: hidden;
+    z-index: 1000;
 }
 .navbar-logged-in-dropdown-content a{
     padding: 2% 0;

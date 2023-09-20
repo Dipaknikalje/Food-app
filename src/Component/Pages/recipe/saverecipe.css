@@ -180,7 +180,7 @@
             justify-content: space-between;
         }
         .saved-recipe-card{
-            width: 45%;
+            width: 80%;
             
         }
 
@@ -200,6 +200,6 @@
         }
 
         .discover-btn-container{
-            width: 45%;
+            width: 80%;
         }
 }

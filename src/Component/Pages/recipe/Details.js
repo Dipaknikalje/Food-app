@@ -55,55 +55,33 @@ const Details = () => {
   //   }
   // };
 
-  // const headers = {
-  //   Authorization: `Bearer ${token}`,
-  // };
-
-  // const handleRecipe = () => {
-  //   const API = `${host}/recipe/saverecipe`;
-
-  //   axios
-  //     .put(
-  //       API,
-  //       {
-  //         userId,
-  //         recipeName: recipes[0].recipe.label,
-  //         recipe: recipes[0].recipe,
-  //       },
-  //       {
-  //         headers: headers,
-  //       }
-  //     )
-  //     .then((response) => {
-  //       console.log(response);
-  //       toast.success(`${recipes[0].recipe.label} added to saves`, {
-  //         position: toast.POSITION.TOP_RIGHT,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-
-  const handleSaveRecipe = async (recipe) => {
+  const handleSaveRecipe = (recipe) => {
+    // console.log(recipe, "recipe from details");
+    const email = localStorage.getItem("email");
     const token = localStorage.getItem("token");
-    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    if (token) {
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-    axios.put(`${host}/recipe/saverecipe`).then((res) => {
-      console.log(res.data);
-      toast.success(`recipes added to saves`, {
+      axios.post(`${host}/recipe/saverecipe`, { email, recipe }).then((res) => {
+        // console.log(res.data, "recipe saved");
+        toast.success(`recipes added to saves`, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      });
+    } else {
+      toast.info(`Please Login first`, {
         position: toast.POSITION.TOP_RIGHT,
       });
-    });
+    }
   };
 
   useEffect(() => {
     fetchRecipeDetails(query).then((res) => {
-      console.log(res);
+      // console.log(res);
       setData(res.hits);
     });
   }, [query]);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="yellow-container">

@@ -46,7 +46,13 @@ const Login = () => {
         position: toast.POSITION.TOP_RIGHT,
       });
     }
-    setErrMsg(res.data.msg);
+    else{
+      setErrMsg(res.data.msg);
+      toast.info("Please registered first", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+
+    }
   };
   function handlePopup(){
     nav(-1);

@@ -1,8 +1,9 @@
 import axios from "axios";
+import { appId, appKey } from "../HostLink";
 const fetchRecipe = async (query) => {
   try {
     const res = await axios.get(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=591bd3cd&app_key=ee49bf3041e13fa627976b22e7cd9ebb&type=public`
+      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${appKey}&type=public`
     );
     return res.data;
   } catch (error) {
@@ -13,7 +14,7 @@ const fetchRecipe = async (query) => {
 const fetchRecipeDetails = async (query) => {
   try {
     const res = await axios.get(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=591bd3cd&app_key=ee49bf3041e13fa627976b22e7cd9ebb&type=public`
+      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${appKey}&type=public`
     );
 
     return res.data;

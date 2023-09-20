@@ -1,6 +1,5 @@
 import React from 'react'
 import './home.css'
-import { NavLink } from 'react-router-dom'
 import Poster from './poster/Poster'
 import Craving from './craving/Craving'
 import Explore from './explore/Explore'
@@ -9,18 +8,17 @@ import Miss from './Miss/Miss'
 import Ideas from './ideas/Ideas'
 import PeelPeach from './peaches/PeelPeach'
 import FooterSearchBar from '../../Footer/FooterSearchBar'
+import Comments from '../recipe/CommentsFIle/Comments'
 const Home = () => {
   return (
     <>
     <Poster/>
     <div className='Home-page'>
       <div className='addvertise'>Advertisement</div>
-      <div className='comments-section'>
-        <div className='heading-btn'>
-        <div className='comments-heading'>Fresh from our community</div>
-        <NavLink to="/comments" className="allcmt-btn">View All</NavLink>
-        </div>
-        <div className='comments'>
+
+      <Comments/>
+        {/* <Comments/> */}
+        {/* <div className='comments'>
           <div className="user-review">
             <span className="user-content">
               <img
@@ -87,16 +85,19 @@ const Home = () => {
             <h3 className="comment-reply">Reply</h3>
 
           </div>
-          </div>
-      </div>
+          </div> */}
       <Craving/>
       <Explore/>
-      <div className="ad-explore"></div>
+      <div className="addvertise"></div>
       <br/>
       <Trending/>
       <Miss/>
       <Ideas/>
-      <div className="ad-idea"></div>
+      <br/>
+      <br/>
+      <div className="addvertise"></div>
+      <br/>
+      <br/>
       <PeelPeach/>
       <br/>
       <FooterSearchBar/>

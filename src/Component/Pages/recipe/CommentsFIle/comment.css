@@ -1,123 +1,89 @@
-.detail_commets_head{
-    font-family: var(--fonts-heading);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    --current-line-height: 24px;
-}
-
-.comments_cntr {
-    padding-bottom: 3rem;
-}
-
-.detailed_smile-emoji{
-    color: #f5ce35;
-    font-size: 3rem;
+.comments-container{
+    width: 82%;
+    margin: auto;
     display: flex;
-    border: 1px solid #f5ce35;
-    /* width: 2.6rem; */
-    /* height: 2.2rem; */
-    border-radius: 50%;
-    background-color: black;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
 }
 
-
-.comments_input_line {
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--fonts-base);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    --current-line-height: 24px;
-    letter-spacing: 0;
-    gap: 24px;
-    padding-top: 2rem;
+.comments-section-title{
+   display: flex;
+   justify-content: space-between;
 }
 
-.comments_input_line input {
-    height: 48px;
-    border: 2px solid #BFBFBF;
-    border-radius: 100px;
-    padding-left: 24px;
-    align-self: flex-end;
-    flex-grow: 3;
-    font-size: 16px;
+.comments-wrapper{
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   height: 20rem;
 }
 
-.comments_input_line button{
-    
-    flex-grow: 1;
-    font-family: var(--fonts-heading);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    --current-line-height: 24px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color .2s;
-    border: navajowhite;
+.comments-card{
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: self-start;
+   justify-content: space-between;
+   width: 35%;
+   border: 1px solid rgb(225, 225, 225);
 }
 
-.comments_submit{
-    background-color: #f5ce35;
+.user{
+   color: blue;
+   font-weight: 500;
 }
 
-.comments_signup{
-    background-color: #77e2e1;
+.user-name{
+   height: 2rem;
+   height: 2.5rem;
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+.user-name img{
+   margin-top: 1rem;
+   width: 20%;
+}
+.comments-txt{
+   overflow: hidden;
+   margin-top: 2.5rem;
+   height: 60%;
+   display: flex;
+   align-items: flex-start;
+   font-size: 1rem;
+}
+.recipeName{
+    color:blue;
+}
+.comment-time{
+   height: 20%;  display: flex;
+   align-items: flex-end;
 }
 
-
-/* comments css */
-
-/* comments css */
-
-.comments_display_card {
-    margin-bottom: 16px;
-    border: 2px solid #F2F2F2;
-    border-radius: 4px;
-    padding: 10px;
-    /* display: flex;
-    align-items: center;  */
-  }
-  
-  .main_cntnt-cmnt {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 16px;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .comments_smile-emoji{
-        width: 6%;
-        /* flex-basis: 35px; */
-        /* flex-shrink: 0; */
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        font-size: 20px;
-    }
-    .comment_text {
-        flex-grow: 1; /* Grow to take available space */
-      }
-    
-      .cmnt_text {
-        width: 80%;
-    }
-    
-    .detail_comment_base{
-        display: flex;
+@media only screen and (min-width:250px) and (max-width:840px) {
+    .comments-container{
+        width: 90%;
+        gap: 1rem;
+     }
+     .comments-txt{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+     }
+     
+     .comments-wrapper{
+        flex-direction: column;
+        height: 100%;
+     }
+     .comments-card{
         width: 100%;
-        padding: 5px;
-        justify-content: flex-end;
-        align-items: center;
-    
-    }
+        padding: 1rem;
+     }
+     
+     .user-name img{
+        width: 3rem;
+        height: 3rem;
+     }
+}

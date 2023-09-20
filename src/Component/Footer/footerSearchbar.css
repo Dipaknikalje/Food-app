@@ -26,16 +26,16 @@
 }
 
 #find-searchbar-search-bar input[type=search]{
-    width: 45rem;
-    height: 0.5rem;
-    border: none;
-    margin-left: 1rem;
+    /* width: 45rem; */
+    /* height: 0.5rem; */
+    /* border: none; */
+    /* margin-left: 1rem; */
     /* font-size: 1rem; */
     /* font-weight: 900; */
-    outline: none;
-    background:transparent;
-   margin-top: 1%;
-   padding:2rem;
+    /* outline: none; */
+    /* background:transparent; */
+   /* margin-top: 0; */
+   /* padding:0; */
 
 }
 

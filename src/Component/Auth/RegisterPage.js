@@ -26,6 +26,8 @@ const RegisterPage = () => {
     if ((res.data.msg = "user registered successfully")) {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("data", res.data);
+      localStorage.setItem("email", res.data.email);
+
       nav("/");
     }
   };

@@ -149,3 +149,15 @@
     color: purple;
     font-weight: 500;
 }
+
+@media only screen and (min-width:250px) and (max-width:840px) {
+    .searched-recipe-wrapper{
+        flex-basis: calc(80% - 20px);
+        background-color: #ffffff;
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        border-bottom: 5px solid aqua;
+    }
+
+}

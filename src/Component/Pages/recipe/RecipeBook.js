@@ -10,7 +10,7 @@ import { host } from "../../Utility/HostLink";
 const RecipeBook = () => {
   const [showSearchBar, setShowSearchbar] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   const [showSavedRecipe, setShowSavedRecipe] = useState(true);
   const [showBoards, setShowBoards] = useState(false);
@@ -43,34 +43,21 @@ const RecipeBook = () => {
 
   const fetchSavedRecipes = async () => {
     try {
-      const token = localStorage.getItem("token");
-      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      // const token = localStorage.getItem("token");
+      const email = localStorage.getItem("email");
+      // axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-      const resp = await axios.get(`${host}/recipe/fetchrecipe`);
-      console.log(resp.data);
-      setData(resp.data.saved.saved_recipes);
+      const resp = await axios.get(`${host}/recipe/fetchrecipe/${email}`);
+      // console.log(resp.data, "fetching  saved recipes");
+      setData(resp.data.userRecipe.saved);
     } catch (err) {
       console.log(err);
     }
   };
-
+  // console.log(data, "data is rendering");
   useEffect(() => {
     fetchSavedRecipes();
   }, []);
-  const deleteRecipe = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-      const resp = await axios.put(`${host}/recipe/deleterecipe`);
-      resp.then((res) => {
-        console.log(res.data);
-      });
-    } catch (error) {
-      console.log(error);
-      window.location.reload();
-    }
-  };
-
   return (
     <>
       <header className="save-header">
@@ -156,22 +143,22 @@ const RecipeBook = () => {
               ? data.map((item, index) => {
                   return (
                     <div key={index} className="saved-recipe-card">
-                      <NavLink to={`/details?q=${item.label}`}>
+                      {/* {console.log(item.recipe[0].label, "recipelist")} */}
+                      <NavLink to={`/details?q=${item.recipe[0].label}`}>
                         <div className="img">
-                          <img src={item.image} alt={item.label} />
+                          <img
+                            src={item.recipe[0].image}
+                            alt={item.recipe[0].label}
+                          />
                         </div>
 
                         <div className="recipe-label">
                           <div className="title">
-                            <p className="label">{item.label}</p>
-                            <p className="rating">By {item.source}</p>
+                            <p className="label">{item.recipe[0].label}</p>
+                            <p className="rating">By {item.recipe[0].source}</p>
                           </div>
                         </div>
                       </NavLink>
-                      <i
-                        class="fa-sharp fa-solid fa-trash"
-                        onClick={deleteRecipe}
-                      ></i>
                     </div>
                   );
                 })

@@ -1,11 +1,8 @@
 .poster-file{
     display: flex;
 }
-
-
-
 .poster-img{
-    margin: 1.3rem
+    margin-bottom: 1rem;
 }
 .poster-img img{
     margin-top:40px;

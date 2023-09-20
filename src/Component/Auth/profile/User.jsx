@@ -31,7 +31,7 @@ console.log("user-page running")
                     </div>
                 </div>
                 <div id='profile-user-username'>
-                    <p>@{email}</p>
+                    <p>@{email.substring(0, email.length - 10)}</p>
                 </div>
                 <div id='profile-user-filters'>
                     <div id='profile-user-filters-container'>

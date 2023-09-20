@@ -6,6 +6,7 @@
     padding: 2rem 0;
     text-align: center;
     width: 100%;
+    overflow-x: hidden;
 }
 
 #find-searchbar h2{
@@ -34,7 +35,7 @@
     /* font-weight: 900; */
     outline: none;
     background-color: white;
-   margin-top: 2.3%;
+   /* margin-top: 2.3%; */
 
 }
 
