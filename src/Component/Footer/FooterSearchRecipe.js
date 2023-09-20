@@ -4,18 +4,17 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+import { appId, appKey } from "../Utility/HostLink";
 
 const FooterSearchRecipe = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
 
-  const APP_ID = "591bd3cd";
-  const APP_KEY = "ee49bf3041e13fa627976b22e7cd9ebb";
 
   const getSearchRecipes = (searchQuery) => {
     axios
       .get(
-        `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=60`
+        `https://api.edamam.com/search?q=${search}&app_id=${appId}&app_key=${appKey}&from=0&to=60`
       )
       .then((response) => setData(response.data.hits))
       .catch((error) => console.log("Error", error));

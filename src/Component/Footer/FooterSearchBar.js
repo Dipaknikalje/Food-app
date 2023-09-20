@@ -4,6 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { appId, appKey } from "../Utility/HostLink";
 
 const FooterSearchBar = () => {
   const [search, setSearch] = useState("");
@@ -12,8 +13,7 @@ const FooterSearchBar = () => {
   const getSearchRecipes = (search) => {
     axios
       .get(
-        `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=591bd3cd&app_key=ee49bf3041e13fa627976b22e7cd9ebb
-        &from=0&to=60`
+        `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${appId}&app_key=${appKey}&from=0&to=60`
       )
       .then((response) => setData(response.data.hits))
       .catch((error) => console.log("Error", error));

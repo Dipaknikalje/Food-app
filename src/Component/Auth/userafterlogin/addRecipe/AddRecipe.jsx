@@ -28,11 +28,12 @@ const AddRecipe = () => {
 
     const handleSubmit = async () => {
         try {
-            const token = localStorage.getItem("token");
-      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+            const email=localStorage.getItem("email")
+    //         const token = localStorage.getItem("token");
+    //   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-      const resp = await axios.put(`${host}/recipe/saverecipe`,{
-           recipeTitle, recipeDescription, recipeCategory, recipePrepTime, recipeCookTime, recipeServes, recipeIngredients, recipeDirections, recipeSaveRecipeAs,
+      const resp = await axios.post(`${host}/recipe/saverecipe`,{
+           email,recipeTitle, recipeDescription, recipeCategory, recipePrepTime, recipeCookTime, recipeServes, recipeIngredients, recipeDirections, recipeSaveRecipeAs,
                 
             });
                resp.then(res => {
